@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Data"
+categories: jekyll update
+classes:
+- analytics
+- media_graph
+---
+
+#Reaallly????
+{% highlight ruby %}
+tickets=[27,30,32]
+puts "Hi, User"
+
+{% endhighlight %}
+       
