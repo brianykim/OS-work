@@ -3,9 +3,9 @@ layout: post
 title:  "Platform"
 categories: jekyll update
 classes:
-- accounts
-- ad_formats
-- ad_macros
+ - name: accounts
+ - name: ad_formats
+ - name: ad_macros
 ---
 
 <h2 id ="accounts">accounts.rb</h2>

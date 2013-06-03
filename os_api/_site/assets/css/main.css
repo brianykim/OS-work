@@ -34,7 +34,7 @@ p { margin: 1em 0; }
 
 a         { color: #00a; }
 a:hover   { color: #000; }
-a:visited { color: #a0a; }
+
 pre{
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
@@ -48,13 +48,27 @@ div ul li, div ul li ul li{
   left-margin:20px;
 }
 .link{
+  font-size:16px;
   text-decoration:none;
-  padding-left:.6em;
+  padding-left:0.6em;
 }
-.classes li a{
+.clickedlink{
+
+}
+.posts{
+  display:none;
   text-decoration:none;
   color:#330000;
   padding-left: 1.2em;
+}
+.classes{
+  text-decoration:none;
+}
+.methods, .attributes{
+  list-style-type:none;
+  text-decoration:none;
+  color:#660000;
+  padding-left:10px;
 }
 
 /*****************************************************************************/
@@ -64,11 +78,11 @@ div ul li, div ul li ul li{
 /*****************************************************************************/
 ul.posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin-bottom: .5em;
 }
 
 ul.posts li {
-  line-height: 1.75em;
+  line-height: 1.55em;
 }
 
 ul.posts span 
@@ -79,6 +93,9 @@ ul.posts span
 .plat{
   display:none;
   background-color:#F38630;
+}
+.apicomp{
+  font-size:18px;
 }
 .navbar
 {

@@ -2,9 +2,16 @@
 layout: post
 title:  "Data"
 categories: jekyll update
-classes:
-- analytics
-- media_graph
+classes: 
+  - 
+    methods: 
+      - method1
+    name: analytics
+  - 
+    methods: 
+      - method2
+      - method3
+    name: media_graph 
 ---
 
 #Reaallly????
