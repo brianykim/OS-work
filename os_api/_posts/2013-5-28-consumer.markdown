@@ -3,8 +3,14 @@ layout: post
 title: "Consumer"
 categories: jekyll update
 classes:
- - name: Android
- - name: IOS
+  - 
+    methods:
+      - method
+    name: Android
+  - 
+    methods:
+      - method1
+    name: IOS
 ---
 
 #Hi, I'm a header!

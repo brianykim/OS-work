@@ -31,15 +31,17 @@
 
                 {% for post in site.posts %}</br>
 
-                <a  class="link" id="{{ post.title }}"href="{{ post.url }}">{{ post.title }}</a>
+                <a  class="link" style="color:red" href="{{ post.url }}">{{ post.title }}</a>
                 <ul class="posts">
                   {% assign @classroom = post.classes %}
                   {% for class in @classroom %}
           
-                  <li><a class="classes" href="#{{ class.name }}">{{ class.name }}</a></li>
+                  <li><a class="classes" href="{{ post.url }}/#{{ class.name }}">{{ class.name }}</a></li>
                     <ul class="methods">
+                      <li style="color:purple">Methods</li>
                     {% for method in class.methods %}
-                      <li><a class="methods" id="{{ method }}" href= "#{{ method }}"> {{ method }}</a></li>
+
+                      <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ method }}"> {{ method }}</a></li>
                     {% endfor %}
                     </ul>
                 

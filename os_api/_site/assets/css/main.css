@@ -56,8 +56,8 @@ div ul li, div ul li ul li{
 
 }
 .posts{
-  display:none;
-  text-decoration:none;
+  /*display:none;
+  */text-decoration:none;
   color:#330000;
   padding-left: 1.2em;
 }
@@ -101,7 +101,7 @@ ul.posts span
 {
 
   float:left;
-  width:140px;
+  width:150px;
   position:fixed;
   display:block;
   background-color:#CCFFFF;
