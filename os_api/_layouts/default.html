@@ -12,33 +12,32 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/main.css">
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="/assets/javascripts/script.js">
-        </script>
+        <script type="text/javascript" src="/assets/javascripts/script.js"></script>
    
         
     </head>
     <body>
         <div class="container">
-          <div class="site">
+          <div class="site">  
             <div class="header">
               <a href="http://www.onescreen.com"><img src="http://www.onescreen.com/wp-content/themes/NewOneScreen/images/onescreen_logo.png"/></a>
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
             <div class="navbar">
-              <p class="apicomp">API Components</p>
-              
+              <span class="apicomp">API Components</span>
+              </br>
 
                 {% for post in site.posts %}</br>
 
-                <a  class="link" style="color:red" href="{{ post.url }}">{{ post.title }}</a>
+                <a  class="link" onclick="changeClass();" href="{{ post.url }}">{{ post.title }}</a>
                 <ul class="posts">
                   {% assign @classroom = post.classes %}
                   {% for class in @classroom %}
           
                   <li><a class="classes" href="{{ post.url }}/#{{ class.name }}">{{ class.name }}</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     {% for method in class.methods %}
 
                       <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ method }}"> {{ method }}</a></li>

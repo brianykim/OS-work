@@ -12,33 +12,32 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/main.css">
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script type="text/javascript" src="/assets/javascripts/script.js">
-        </script>
+        <script type="text/javascript" src="/assets/javascripts/script.js"></script>
    
         
     </head>
     <body>
         <div class="container">
-          <div class="site">
+          <div class="site">  
             <div class="header">
               <a href="http://www.onescreen.com"><img src="http://www.onescreen.com/wp-content/themes/NewOneScreen/images/onescreen_logo.png"/></a>
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
             <div class="navbar">
-              <p class="apicomp">API Components</p>
-              
+              <span class="apicomp">API Components</span>
+              </br>
 
                 </br>
 
-                <a  class="link" style="color:red" href="/platform">Platform</a>
+                <a  class="link" onclick="changeClass();" href="/platform">Platform</a>
                 <ul class="posts">
                   
                   
           
                   <li><a class="classes" href="/platform/#accounts">accounts</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
                     </ul>
                 
@@ -46,7 +45,7 @@
           
                   <li><a class="classes" href="/platform/#ad_formats">ad_formats</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
                     </ul>
                 
@@ -54,25 +53,25 @@
           
                   <li><a class="classes" href="/platform/#ad_macros">ad_macros</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
                     </ul>
                 
                   
                   
-                  <!--<li>nameaccountsnamead_formatsnamead_macros</li>
+                  <!--<li>{"name"=>"accounts"}{"name"=>"ad_formats"}{"name"=>"ad_macros"}</li>
                   -->
                 </ul>    
                 </br>
 
-                <a  class="link" style="color:red" href="/data">Data</a>
+                <a  class="link" onclick="changeClass();" href="/data">Data</a>
                 <ul class="posts">
                   
                   
           
                   <li><a class="classes" href="/data/#analytics">analytics</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method1" href= "/data/#method1"> method1</a></li>
@@ -83,7 +82,7 @@
           
                   <li><a class="classes" href="/data/#media_graph">media_graph</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method2" href= "/data/#method2"> method2</a></li>
@@ -95,19 +94,19 @@
                 
                   
                   
-                  <!--<li>nameanalyticsmethodsmethod1namemedia_graphmethodsmethod2method3</li>
+                  <!--<li>{"methods"=>["method1"], "name"=>"analytics"}{"methods"=>["method2", "method3"], "name"=>"media_graph"}</li>
                   -->
                 </ul>    
                 </br>
 
-                <a  class="link" style="color:red" href="/consumer">Consumer</a>
+                <a  class="link" onclick="changeClass();" href="/consumer">Consumer</a>
                 <ul class="posts">
                   
                   
           
                   <li><a class="classes" href="/consumer/#Android">Android</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method" href= "/consumer/#method"> method</a></li>
@@ -118,7 +117,7 @@
           
                   <li><a class="classes" href="/consumer/#IOS">IOS</a></li>
                     <ul class="methods">
-                      <li style="color:purple">Methods</li>
+                      <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method1" href= "/consumer/#method1"> method1</a></li>
@@ -127,23 +126,25 @@
                 
                   
                   
-                  <!--<li>nameAndroidmethodsmethodnameIOSmethodsmethod1</li>
+                  <!--<li>{"methods"=>["method"], "name"=>"Android"}{"methods"=>["method1"], "name"=>"IOS"}</li>
                   -->
                 </ul>    
                 
               
             </div>
      
-                <h1>Consumer</h1>
-<p> Module: OneScreen</p>
+                </br>
+</br>
+
+<h1 id="posttitle">Consumer</h1>
+<p id="postp"> Module: OneScreen</p>
 <!--<p class="meta">28 May 2013</p>
 -->
 <div id="post">
-<h1 id='hi_im_a_header'>Hi, I&#8217;m a header!</h1>
+<h1 id='hi_i_am_a_header'>Hi, I am a header!</h1>
 
-<p>HERE IS THE BODY OF THE MARKDOWN DOCUMENT</p>
+<p>HERE IS THE BODY OF THE MARKDOWN DOCUMENT <p>Right now it is:  2013-06-04 18:01:25 -0700</p></p>
 </div>
-
 
             <div class="footer">
               <div class="contact">
