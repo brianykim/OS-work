@@ -56,19 +56,21 @@ div ul li, div ul li ul li{
   border-bottom-width: 2px;
 
 }
+
+#accordion{
+}
 #method{
   border-bottom-width:1px;
   border-bottom-style:solid;
   display:none;
 }
-.clickedul{
-  display: block;
+#clickedul{
+  display: none;
   text-decoration:none;
   color:#330000;
   padding-left: 1.2em;
 }
-.posts{
-  
+#posts{
   text-decoration:none;
   color:#330000;
   padding-left: 1.2em;

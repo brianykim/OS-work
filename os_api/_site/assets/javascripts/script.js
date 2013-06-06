@@ -42,17 +42,55 @@
 				}
 			}
     */
-          $("body").css("color","red");
-     $(document).ready(function getEl(){
+
+   // $("#accordion").accordion({collapsible:true});
+      /*   
+     $(document).ready( function(){
+      $("body").css("color","red");
+      });
+		*/
+
+      
+      function getEl(){
       var ev = arguments[0] || window.event;
       origEl = ev.target || ev.srcElement;
-      alert(origEl.tagName);
-      document.onclick = getEl;
+      if(origEl.id=="unclicked")
+      {
+        origEl.id="clicked";
+        var named= origEl.id;
+        var uls = document.getElementsByName("giveitashot");
+        for(var i=0; i<uls.length; i++)
+        {
+          if(uls[i].parent.id==clicked)
+          {
+            
+            break;
+          }
+        }
+        uls[0].setAttribute("id","clickedul");
+        alert(uls[0].id);
+        /*for(var i=0; i<sibs.length; i++)
+        {
+          if(sibs[i].id=="posts")
+          {
+            sibs[i].id="clickedul";
+            
+            alert(getElementById("clickedul"));
+            break;
+          }
 
-		});
-		
+        }
+        //YOU HAVE TO CHANGE THE SIBLING.... UL IS NOT A CHILD OF ORIGEL THE LINK.... *SIGH* BRIAN...
+    
+          origEl.id="clicked";
+          var e = document.getElementById("clicked");
+          alert(e.id);*/
+      }
+      
 
-       /*
+    }
+document.onclick = getEl;
+/*
   	$(document).ready(function(){
   	    $(".link").click(function(e){
   	    	

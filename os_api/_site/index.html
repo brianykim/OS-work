@@ -11,9 +11,10 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="/assets/javascripts/script.js"></script>
-   
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         
     </head>
     <body>
@@ -27,61 +28,73 @@
             <div class="navbar">
               <span class="apicomp">API Components</span>
               </br>
-
+                <div id="accordion">
                 </br>
 
-                <a  class="link" onclick="changeClass();" href="/platform">Platform</a>
-                <ul class="posts">
+                <a  class="link" id="unclicked"  onclick="changeClass();" href="/platform">Platform</a>
+                
+                <ul name="giveitashot" id="posts">
                   
                   
           
                   <li><a class="classes" href="/platform/#accounts">accounts</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
+                   
                     </ul>
-                
+               
                   
           
                   <li><a class="classes" href="/platform/#ad_formats">ad_formats</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
+                   
                     </ul>
-                
+               
                   
           
                   <li><a class="classes" href="/platform/#ad_macros">ad_macros</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
+                   
                     </ul>
-                
+               
                   
                   
                   <!--<li>{"name"=>"accounts"}{"name"=>"ad_formats"}{"name"=>"ad_macros"}</li>
                   -->
-                </ul>    
+                </ul> 
+                 
                 </br>
 
-                <a  class="link" onclick="changeClass();" href="/data">Data</a>
-                <ul class="posts">
+                <a  class="link" id="unclicked"  onclick="changeClass();" href="/data">Data</a>
+                
+                <ul name="giveitashot" id="posts">
                   
                   
           
                   <li><a class="classes" href="/data/#analytics">analytics</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method1" href= "/data/#method1"> method1</a></li>
                     
+                   
                     </ul>
-                
+               
                   
           
                   <li><a class="classes" href="/data/#media_graph">media_graph</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
 
@@ -90,49 +103,57 @@
 
                       <li><a class="methods" id="method3" href= "/data/#method3"> method3</a></li>
                     
+                   
                     </ul>
-                
+               
                   
                   
                   <!--<li>{"methods"=>["method1"], "name"=>"analytics"}{"methods"=>["method2", "method3"], "name"=>"media_graph"}</li>
                   -->
-                </ul>    
+                </ul> 
+                 
                 </br>
 
-                <a  class="link" onclick="changeClass();" href="/consumer">Consumer</a>
-                <ul class="posts">
+                <a  class="link" id="unclicked"  onclick="changeClass();" href="/consumer">Consumer</a>
+                
+                <ul name="giveitashot" id="posts">
                   
                   
           
                   <li><a class="classes" href="/consumer/#Android">Android</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method" href= "/consumer/#method"> method</a></li>
                     
+                   
                     </ul>
-                
+               
                   
           
                   <li><a class="classes" href="/consumer/#IOS">IOS</a></li>
                     <ul class="methods">
+                  
                       <li id="method" style="color:purple">Methods</li>
                     
 
                       <li><a class="methods" id="method1" href= "/consumer/#method1"> method1</a></li>
                     
+                   
                     </ul>
-                
+               
                   
                   
                   <!--<li>{"methods"=>["method"], "name"=>"Android"}{"methods"=>["method1"], "name"=>"IOS"}</li>
                   -->
-                </ul>    
+                </ul> 
+                 
                 
-              
+               </div>
             </div>
-     
+                <!--<img src="http://www.onescreen.com/files/carousel_connect1.jpg"/>-->
                 <div id="home">
   <h1>Welcome to the OneScreen API for Ruby Developers</h1>
   	<p>
