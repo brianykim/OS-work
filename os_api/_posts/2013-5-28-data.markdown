@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Data"
+title:  "Analytics"
 categories: jekyll update
 classes: 
   - 
     methods: 
       - method1
-    name: analytics
+    name: Advertising
   - 
     methods: 
       - method2

@@ -1,16 +1,21 @@
 ---
 layout: post
 title:  "Platform"
-categories: jekyll update
-classes:
- - name: accounts
- - name: ad_formats
- - name: ad_macros
+categories: "jekyll update"
+classes: 
+  - 
+    methods: 
+      - GET/MINE?
+    name: accounts
+  - 
+    name: ad_formats
+  - 
+    name: ad_macros
 ---
 
 <h2 id ="accounts">accounts.rb</h2>
-
-###Methods
+Methods
+###
 
 
 

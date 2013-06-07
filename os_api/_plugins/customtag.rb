@@ -6,8 +6,11 @@ module Jekyll
 		end
 		def render(context)
 			"#{@text} #{Time.now}"
+			#in here we will parse the text other than the tag into a hash???? not necessarily a data structure needed, but we can format it accordingly?
 		end
-
+=begin
+why does it have to be in the front...
+=end
 	end
 end
  Liquid::Template.register_tag('render_time',Jekyll::APITag)

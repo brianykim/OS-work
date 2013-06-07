@@ -54,16 +54,16 @@
       function getEl(){
       var ev = arguments[0] || window.event;
       origEl = ev.target || ev.srcElement;
+      //alert(origEl.tagName);
       if(origEl.id=="unclicked")
       {
         origEl.id="clicked";
-        var named= origEl.id;
         var uls = document.getElementsByName("giveitashot");
         for(var i=0; i<uls.length; i++)
         {
           if(uls[i].parent.id==clicked)
           {
-            
+
             break;
           }
         }
