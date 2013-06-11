@@ -19,4 +19,4 @@ classes:
 #Hi, I am a header!
 
 HERE IS THE BODY OF THE MARKDOWN DOCUMENT
-<p>{% render_time Right now it is: %}</p>
+{% render_time Right now it is: %}

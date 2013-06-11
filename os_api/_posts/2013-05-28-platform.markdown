@@ -13,9 +13,8 @@ classes:
     name: ad_macros
 ---
 
-<h2 id ="accounts">accounts.rb</h2>
+{% class_name accounts.rb %}
 Methods
-###
 
 {% render_time Huh? %}
 

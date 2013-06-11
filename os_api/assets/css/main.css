@@ -54,10 +54,23 @@ div ul li, div ul li ul li{
   border-bottom-style: solid;
   border-bottom-color: black;
   border-bottom-width: 2px;
+  cursor:pointer;
 
 }
+#unclicked
+{
+  font-size:16px;
+  color:red;
+  text-decoration:none;
+  padding-left:0.6em;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 2px;
+}
 
-#accordion{
+.content {
+  display:none;
+  float:left;
 }
 #method{
   border-bottom-width:1px;

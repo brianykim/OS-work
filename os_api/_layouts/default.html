@@ -15,6 +15,7 @@
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="/assets/javascripts/script.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         
     </head>
     <body>
@@ -31,9 +32,8 @@
                 <div id="accordion">
                 {% for post in site.posts %}</br>
 
-                <a  class="link" id="unclicked"  onclick="changeClass();" href="{{ post.url }}">{{ post.title }}</a>
-                
-                <ul name="giveitashot" id="posts">
+                <div class = "linked"><a  id="unclicked"  onclick="changeClass();" href="{{ post.url }}">{{ post.title }}</a></div>
+                <ul class = "content" name="ulist" id="posts">
                   {% assign @classroom = post.classes %}
                   {% for class in @classroom %}
           
@@ -47,7 +47,6 @@
                     {% endfor %}
                    
                     </ul>
-               
                   {% endfor %}
                   
                   <!--<li>{{ post.classes }}</li>

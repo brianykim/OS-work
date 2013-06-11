@@ -12,9 +12,18 @@ module Jekyll
 			#parsable.split(",") #BUT DO THIS AFTER YOU GET PAST THE ORIGINAL TEXT OF "INPUTS:"" OR RATHER STORE TAHT SOMEWHERE ELSE AND HAVE THAT DISPLAYED?
 			"#{@text} #{Time.now}"
 
+			#words=text.split(",");
+=begin			if(words[0]=="inputs:")
+				words.shift
+				for word in words
+					"<td"
+				end
+			end
+=end			
+			#PARSE TEXT HERE... THEN "<div> where need be </div>"
 			#in here we will parse the text other than the tag into a hash???? not necessarily a data structure needed, but we can format it accordingly?
 		end
-#/{% endhighlight %}
+#{% endhighlight %}
 
 	end
 end

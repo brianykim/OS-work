@@ -52,7 +52,21 @@
 
       
       
-      function getEl(){
+      //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
+      $(document).ready(function() {
+
+ 
+  //ACCORDION BUTTON ACTION
+  $('div.linked').mouseenter(function() {
+    $('ul.content').slideUp('normal');  
+    $(this).next().slideDown('normal');
+  });
+ 
+  //HIDE THE DIVS ON PAGE LOAD  
+  //$("ul.content").hide();
+ 
+});
+     /* function getEl(){
       var ev = arguments[0] || window.event;
       origEl = ev.target || ev.srcElement;
       //alert(origEl.tagName);
@@ -85,13 +99,13 @@
     
           origEl.id="clicked";
           var e = document.getElementById("clicked");
-          alert(e.id);*/
+          alert(e.id);
       }
       
 
     }
 document.onclick = getEl;
-/*
+*//*
   	$(document).ready(function(){
   	    $(".link").click(function(e){
   	    	
