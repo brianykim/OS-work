@@ -1,17 +1,30 @@
 module Jekyll
 	class InputTag < Liquid::Tag
-		def initialize(name,text,tokens)
+		def initialize(name, text, tokens)
 			super
 			@text = text
 			@name = name
 		end
-
 		def render(context)
-			#PARSE THE TEXT, AND OUTPUT THE HTML
+			output ="<h1>INPUTS</h1>"
+			inputs = @text.split(':')
+			output += "<table border ='1'>"
+			#MAKE A DATA TABLE HERE
+			inputs.each do |input|
+				what=input.to_s
+				output+="<tr>"
+				inside = what.split(",")
+				for side in inside
+					huh=side.to_s()
+					output+="<td>#{huh}</td>"
+				end
+				output+="</tr>"
+			end
+			output+="</table>"
+			"#{output}"
 			#EVERYTHING CAN BE DONE WITH CUSTOM LIQUID TAGS, EVEN METHODS???, nah
 			#BUT HOW TO MATCH WITH THE METHOD.... FUUUUU can't do it from YAML can I?
 		end
 	end
 end
-
-Liquid::Template.register_tag("inputs",Jekyll::InputTag)
+Liquid::Template.register_tag('inputs_tag',Jekyll::InputTag)
