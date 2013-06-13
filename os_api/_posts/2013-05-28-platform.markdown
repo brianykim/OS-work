@@ -13,7 +13,9 @@ classes:
     name: ad_macros
 ---
 
-{% class_name accounts.rb %}
+{% resource %}
+resource :accounts do
+{% endresource %}
 Methods
 {% inputs_tag firstparam,description 1:2ndparam,description 2 %}
 {% render_time Huh? %}
@@ -116,7 +118,9 @@ print_hi('Tom')
 
 ###Attributes
 
-{% class_name ad_formats.rb %}
+{% class_name %}
+ad_formats.rb
+{% endclass_name %}
 ###Methods
 
 ###Attributes

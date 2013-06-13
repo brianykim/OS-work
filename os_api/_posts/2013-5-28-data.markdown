@@ -21,4 +21,24 @@ tickets=[27,30,32]
 puts "Hi, User"
 
 {% endhighlight %}
-       
+
+{% class_name %}
+  class PLATFORM '&lt' Grape::API
+{% endclass_name %}
+{% resource %}
+    resource :accounts do
+{% endresource %}
+      before do 
+        authenticate!
+        check_permission!
+        Account.reset_serializations!
+      end
+{% method %}
+      get "/mine" do
+{% comment %}
+#some sort of description or overview? maybe input tags... idk O_O
+{% endcomment %}
+        output = Account.active.find(current_account.id)
+        output
+      end
+{% endmethod %}       
