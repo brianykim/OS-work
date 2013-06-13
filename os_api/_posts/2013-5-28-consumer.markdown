@@ -17,6 +17,8 @@ classes:
 ---
 
 #Hi, I am a header!
-
+{% comment %}
 HERE IS THE BODY OF THE MARKDOWN DOCUMENT
+{% endcomment %}
+
 {% render_time Right now it is: %}

@@ -8,7 +8,7 @@ module Jekyll
 		def render(context)
 			output ="<h1>INPUTS</h1>"
 			inputs = @text.split(':')
-			output += "<table border ='1'>"
+			output += "<table id='paras' border ='1'>"
 			#MAKE A DATA TABLE HERE
 			inputs.each do |input|
 				what=input.to_s
@@ -28,3 +28,4 @@ module Jekyll
 	end
 end
 Liquid::Template.register_tag('inputs_tag',Jekyll::InputTag)
+#http://api.dev.onescreen.net
