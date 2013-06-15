@@ -118,9 +118,9 @@ print_hi('Tom')
 
 ###Attributes
 
-{% class_name %}
-ad_formats.rb
-{% endclass_name %}
+{% resource %}
+resource :ad_formats do
+{% endresource %}
 ###Methods
 
 ###Attributes

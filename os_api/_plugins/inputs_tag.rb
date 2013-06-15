@@ -8,8 +8,9 @@ module Jekyll
 		def render(context)
 			output ="<h1>INPUTS</h1>"
 			inputs = @text.split(':')
-			output += "<table id='paras' border ='1'>"
+			output += "<table id='paras' ><tr><th>Parameters</th></tr>"
 			#MAKE A DATA TABLE HERE
+
 			inputs.each do |input|
 				what=input.to_s
 				output+="<tr>"
