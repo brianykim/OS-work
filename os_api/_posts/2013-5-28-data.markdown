@@ -33,7 +33,7 @@ puts "Hi, User"
         check_permission!
         Account.reset_serializations!
       end
-{% method %}
+{% method accounts %}
       get "/mine" do
 {% comment %}
 #some sort of description or overview? maybe input tags... idk O_O

@@ -26,6 +26,9 @@
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
+            <div class="sideinfo">
+              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+            </div>
             <div class="navbar">
               <span class="apicomp">API Components</span>
               </br>
@@ -42,8 +45,8 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-                        
-                      <li><a class="methods" id="GET/MINE?" href= "/platform/#GET/MINE?"> GET/MINE?</a></li>
+
+                      <li><a class="methods" id="get "/mine"" href= "/platform/#get "/mine""> get "/mine"</a></li>
                     
                    
                     </ul>
@@ -67,7 +70,7 @@
                     </ul>
                   
                   
-                  <!--<li>{"methods"=>["GET/MINE?"], "name"=>"accounts"}{"name"=>"ad_formats"}{"name"=>"ad_macros"}</li>
+                  <!--<li>{"methods"=>["get \"/mine\""], "name"=>"accounts"}{"name"=>"ad_formats"}{"name"=>"ad_macros"}</li>
                   -->
                 </ul> 
                  
@@ -83,7 +86,7 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-                        
+
                       <li><a class="methods" id="method1" href= "/data/#method1"> method1</a></li>
                     
                    
@@ -95,10 +98,10 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-                        
+
                       <li><a class="methods" id="method2" href= "/data/#method2"> method2</a></li>
                     
-                        
+
                       <li><a class="methods" id="method3" href= "/data/#method3"> method3</a></li>
                     
                    
@@ -121,7 +124,7 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-                        
+
                       <li><a class="methods" id="method" href= "/consumer/#method"> method</a></li>
                     
                    
@@ -133,7 +136,7 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-                        
+
                       <li><a class="methods" id="method1" href= "/consumer/#method1"> method1</a></li>
                     
                    
@@ -165,15 +168,11 @@
 <!--<p class="meta">28 May 2013</p>
 -->
 <div id="post">
-<h1 class='resources' id='accounts'>accounts</h1>
-<p>Methods <h1>INPUTS</h1><table id='paras'><tr><th>Parameters</th></tr><tr><td>firstparam</td><td>description 1</td></tr><tr><td>2ndparam</td><td>description 2 </td></tr></table> Huh? 2013-06-14 15:40:18 -0700</p>
+<h1 class='resources' id='accounts'>accounts</h1><h1 class='method' style='font-family:Helvetica,sans-serif;font-size:200%;'>get "/mine"</h1><h1 class='url' style='border-bottom:2 px solid purple'>Resource URL</h1>
+<p>api.dev.onescreen.net/v2/accounts/mine &#32;<h1>INPUTS</h1><table id='paras'><tr><th>Parameters</th></tr><tr><td>firstparam</td><td>description 1</td></tr><tr><td>2ndparam</td><td>description 2 can be something like oh this parameter works this way </td></tr></table></p>
 
-<h1 id='now'>now&#8230;</h1>
-<div class='highlight'><pre><code class='ruby'>  <span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-  <span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
+<h1 id='example_request'>EXAMPLE REQUEST</h1>
+<div class='highlight'><pre><code class='ruby'> <span class='k'>return</span> <span class='n'>get</span><span class='p'>(</span><span class='s1'>&#39;api.dev.onescreen.net/v2/accounts/mine&#39;</span><span class='p'>)</span>
 </code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
   <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
 <span class='k'>end</span>
@@ -184,71 +183,7 @@
 <span class='k'>end</span>
 <span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
 <span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div><div class='highlight'><pre><code class='ruby'><span class='k'>def</span> <span class='nf'>print_hi</span><span class='p'>(</span><span class='nb'>name</span><span class='p'>)</span>
-  <span class='nb'>puts</span> <span class='s2'>&quot;Hi, </span><span class='si'>#{</span><span class='nb'>name</span><span class='si'>}</span><span class='s2'>&quot;</span>
-<span class='k'>end</span>
-<span class='n'>print_hi</span><span class='p'>(</span><span class='s1'>&#39;Tom&#39;</span><span class='p'>)</span>
-<span class='c1'>#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span>
-</code></pre></div>
-<h3 id='attributes'>Attributes</h3>
-<h1 class='resources' id='ad_formats'>ad_formats</h1>
-<h3 id='methods'>Methods</h3>
-
+</code></pre></div><h1 class='resources' id='ad_formats'>ad_formats</h1>
 <h3 id='attributes'>Attributes</h3>
 
 <p>Check out the <a href='http://jekyllrb.com'>Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href='https://github.com/mojombo/jekyll'>Jekyll&#8217;s GitHub repo</a>.</p>

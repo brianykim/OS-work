@@ -38,21 +38,24 @@ a:hover   { color: #000; }
 
 #paras 
 {
-
+  border-radius:5px;
   border-width: 0px;
   border-color:red;
-  background-color:blue;
-
+  background-color:silver;
+  width:600px;
 }
 #paras th{
   border-bottom: 2px solid black;
 
 }
+#paras tr{
+  
+}
 #paras tr td{
 
- width:50%;
+ 
  text-align:left;
- padding: 15px;
+ padding: 25px;
 }
 pre{
   font: 13.34px Helvetica, Arial, sans-serif;
@@ -145,6 +148,17 @@ ul.posts span
 }
 .apicomp{
   font-size:18px;
+}
+.sideinfo
+{
+  right:345px;
+  position:fixed;
+  width:150px;
+  overflow-y:auto;
+  height: 68%;
+  margin-top:4.75em;
+  display:block;
+  background-color:red;
 }
 .navbar
 {

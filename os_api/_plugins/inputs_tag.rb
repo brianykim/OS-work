@@ -6,9 +6,9 @@ module Jekyll
 			@name = name
 		end
 		def render(context)
-			output ="<h1>INPUTS</h1>"
+			output ="&#x20;<h1>INPUTS</h1>"
 			inputs = @text.split(':')
-			output += "<table id='paras' ><tr><th>Parameters</th></tr>"
+			output += "<table id='paras'><tr><th>Parameters</th></tr>"
 			#MAKE A DATA TABLE HERE
 
 			inputs.each do |input|

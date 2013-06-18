@@ -26,6 +26,9 @@
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
+            <div class="sideinfo">
+              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+            </div>
             <div class="navbar">
               <span class="apicomp">API Components</span>
               </br>
@@ -42,7 +45,7 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     {% for method in class.methods %}
-                        
+
                       <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ method }}"> {{ method }}</a></li>
                     {% endfor %}
                    
