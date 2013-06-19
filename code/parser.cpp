@@ -7,154 +7,194 @@
 #include <sstream>
 #include <cmath>
 #include <dirent.h>
+#include "classcontainer.cpp"
+#include <vector>
 
 using namespace std;
 
 
 int main(int argc, char* argv[])
 {
-	//
-	char diren[100];
+	//THE OUTPUT FILE IS THE NAME OF THE CLASS....
+	//const char *out = ();
+	ofstream ofile("output.txt");
+	////////////////////////////////YAML Data Structures/Generation///////////////////////////
+	//at the end write to file in beginning, then rewrite all file bodies to something else?
+	//these lines below go outside before the directory is traversed,
+	vector<Contain> classes;
+	
+	//these lines go inside of the while loop for each file;
+	//Contain x;
+	//x.name=classname;
+	//x.methods.add(method_name)
+	//classes.add(x)
+	//classes.methods.add(method name)
+
+	////////////////////////////////DIRECTORY TRAVERSING//////////////////////////////////////
+	char dirname[100]="./plats/";//~/api/lib/platform/resources
 	DIR *dir = NULL;
 	struct dirent *dirt=NULL;
-	dir=opendir("~/api/lib/platform/resources");
+	dir=opendir(dirname);
 	if(dir)
 	{
-		
-	}
-		bool method;
-		int check=0;
-		string hello="";
-		if(argc!=2||!(strstr(argv[1],".rb\0")))
+		while(dirt=readdir(dir))
 		{
-			std::cout<<"Please include one Ruby file name please"<<std::endl;
-		}
-		else
-		{
-			int leng = strlen(argv[1]);
-			std::string str(argv[1]);
-			str=str.substr(0,leng-3);
-			str.append(".markdown");
-			std::ifstream ifile(argv[1]);
-			const char *out = str.c_str();
-			std::ofstream ofile(out);
-			char line[1000];
-			if(ifile.good())
+			if(strstr(dirt->d_name,".rb"))
 			{
-				
-				while(ifile.getline(line,1000))	
+				char filename[100];
+				strcpy(filename,dirname);
+				strcat(filename,dirt->d_name);
+				ifstream ifile(filename);
+				bool method;
+				int check=0;
+				string hello="";
+				/////////////////////////////////////INDIVIDUAL FILE PARSING//////////////////////////
+				/*if(argc!=2||!(strstr(argv[1],".rb\0")))
 				{
-					
-					//initialized a string version of line to be used
-					if((strstr(line,"get \"")&&strstr(line,"do"))||(strstr(line,"put \"")&&strstr(line,"do")))
+					std::cout<<"Please include one Ruby file name please"<<std::endl;
+				}
+				else
+				{
+				int leng = strlen(argv[1]);
+				std::string str(argv[1]);
+				str=str.substr(0,leng-3);
+				str.append(".markdown");
+				std::ifstream ifile(argv[1]);*/
+				
+				char line[1000];
+				if(ifile.good())
+				{
+					Contain x;
+
+					while(ifile.getline(line,1000))	
 					{
-						if(hello!="")
+						
+						//initialized a string version of line to be used
+						if((strstr(line,"get \"")&&strstr(line,"do"))||(strstr(line,"put \"")&&strstr(line,"do"))||(strstr(line,"post \"")&&strstr(line,"do"))||(strstr(line,"delete \"")&&strstr(line,"do")))
 						{
-							ofile<<"{% method "<<hello<<" %}"<<endl;
-						}
-						else
-						{
-							ofile<<"{% method %}"<<endl;
-						}
-						ofile<<line<<endl;
-						method=true;
-					}
-					else if(((strstr(line,"  if "))||strstr(line,"each do"))&&!(strstr(line,"#")))
-						{
-							//HOW TO MAKE SURE THAT THE STUPID IF IS AT THE VERY BEGINNING OF THE LINE
-							check++;
-							ofile<<line<<endl;
-						}
-						else if(strstr(line,"end")&&method)
-							{	
-								//USED TO CLOSE LOOPS, IF,ELSE, WHILES, FORS... huh, I'll think of a more cleve rsooultion later
-								if(check==0)
+							//NEED TO PARSE THIS LINE TO GET THE METHOD NAME
+							for(int i=0;i<strlen(line)-2;i++)
+							{
+								if(line[i]==' '&&line[i+1]=='d'&&line[i+2]=='o')
 								{
-									ofile<<line<<endl;
-									ofile<<"{% endmethod %}"<<endl;
-									method=false;
-								}
-								//in the case that there is an if statememt or else or a loop... anything that could end in end...
-								else
-								{
-									ofile<<line<<endl;
-									check--;
+									string mname(line);
+									mname=mname.substr(0,i);
+									mname=mname.substr(6,mname.length()-6);
+									//trim(mname);
+									x.methods.push_back(mname);
 								}
 							}
-
-							else if(strstr(line,"#{"))
-								{
-									std::string aline(line);
-									aline=aline.substr(1,strlen(line));
-								/*	stringstream ss;
-									ss<<aline.substr(1,strlen(line)-1);
-									string tagName;
-									ss>>tagName;
-									if(tagName=="class_name")
+							if(hello!="")
+							{
+								ofile<<"{% method "<<hello<<" %}"<<endl;
+							}
+							else
+							{
+								ofile<<"{% method %}"<<endl;
+							}
+							ofile<<line<<endl;
+							method=true;
+						}
+						else if(((strstr(line,"  if "))||strstr(line,"each do"))&&!(strstr(line,"#")))
+							{
+								//HOW TO MAKE SURE THAT THE STUPID IF IS AT THE VERY BEGINNING OF THE LINE
+								check++;
+								ofile<<line<<endl;
+							}
+							else if(strstr(line,"end")&&method&&!strstr(line,"#"))
+								{	
+									//USED TO CLOSE LOOPS, IF,ELSE, WHILES, FORS... huh, I'll think of a more cleve rsooultion later
+									if(check==0)
 									{
-										ofile<<"<div
-									}
-								*/
-									//HERE TRY A STRING STREAM TO CHECK IF THE FIRST WORD IS THE NAME OF A TAG YOU RECOGNIZE, just lots of if statements for each one??? O_O
-									
-									ofile<<aline<<std::endl;
-								}
-								else if(strstr(line,"#")&&!strstr(line,"{%"))
-									{
-										ofile<<"{% comment %}"<<endl;
 										ofile<<line<<endl;
-										ofile<<"{% endcomment %}"<<endl;
+										ofile<<"{% endmethod %}"<<endl;
+										method=false;
 									}
-									else if(strstr(line,"class"))
+									//in the case that there is an if statememt or else or a loop... anything that could end in end...
+									else
+									{
+										ofile<<line<<endl;
+										check--;
+									}
+								}
+
+								else if(strstr(line,"#{"))
+									{
+										std::string aline(line);
+										aline=aline.substr(1,strlen(line));
+									/*	stringstream ss;
+										ss<<aline.substr(1,strlen(line)-1);
+										string tagName;
+										ss>>tagName;
+										if(tagName=="class_name")
 										{
-											ofile<<"{% class_name %}"<<endl;
-											ofile<<line<<endl;
-											ofile<<"{% endclass_name %}"<<endl;
+											ofile<<"<div
 										}
-										else if(strstr(line,"resource"))
+									*/
+										//HERE TRY A STRING STREAM TO CHECK IF THE FIRST WORD IS THE NAME OF A TAG YOU RECOGNIZE, just lots of if statements for each one??? O_O
+										
+										ofile<<aline<<std::endl;
+									}
+									else if(strstr(line,"#")&&!strstr(line,"{%")||strstr(line,"end")&&!method)
+										{
+											ofile<<"{% comment %}"<<endl;
+											ofile<<line<<endl;
+											ofile<<"{% endcomment %}"<<endl;
+										}
+										else if(strstr(line,"class"))
 											{
-												//string stringent(line);
-												
-												ofile<<"{% resource %}"<<endl;
-												int a,b;
-												int count=0;
-												for(int i=0;i<strlen(line);i++)
+												ofile<<"{% class_name %}"<<endl;
+												ofile<<line<<endl;
+												ofile<<"{% endclass_name %}"<<endl;
+											}
+											else if(strstr(line,"resource"))
 												{
-													if(isspace(line[i]))
+													//string stringent(line);
+													
+													ofile<<"{% resource %}"<<endl;
+													int a,b;
+													int count=0;
+													for(int i=0;i<strlen(line);i++)
 													{
-														count++;
-														if(count==5)
+														if(isspace(line[i]))
 														{
-															a=i;
-														}
-														if(count==6)
-														{
-															b=i;
+															count++;
+															if(count==5)
+															{
+																a=i;
+															}
+															if(count==6)
+															{
+																b=i;
+															}
 														}
 													}
+													string stringent(line);
+													hello=stringent.substr(a+2,b-a-2);
+													x.name=hello;
+													//hello=stringent.substr(a+2,b);
+													//FIND INSTANCE OF FIRST SPACE AND 2ND SPACE, AND GET THE WORD IN BETWEEN THOSE TWO?
+													//int a,b;
+													//strchr
+													
+													//HERE GET ONLY THE RESOURCE WORD OUT OF THIS
+													ofile<<line<<endl;
+													ofile<<"{% endresource %}"<<endl;
 												}
+												//else if(strstr(line,"class"))
+												else
+												{
+													ofile<<line<<std::endl;
+												}
+							
+					}
+					classes.push_back(x);					
+				}
 
-												string stringent(line);
-												hello=stringent.substr(a+2,b-a-2);
-												
-												//hello=stringent.substr(a+2,b);
-												//FIND INSTANCE OF FIRST SPACE AND 2ND SPACE, AND GET THE WORD IN BETWEEN THOSE TWO?
-												//int a,b;
-												//strchr
-												
-												//HERE GET ONLY THE RESOURCE WORD OUT OF THIS
-												ofile<<line<<endl;
-												ofile<<"{% endresource %}"<<endl;
-											}
-											else
-											{
-												ofile<<line<<std::endl;
-											}
-						}
-			}
-			else
-			{
-				std::cout<<"File does not exist"<<std::endl;
+				/*else
+				{
+					std::cout<<"File does not exist"<<std::endl;
+				}*/
 			}
 //maybe if {class name then, write to file a certain way, make the custom tags in the parser.... just easier that way for me lol
 		//IFILE.GETLINE(LINE,1000);
@@ -165,5 +205,41 @@ int main(int argc, char* argv[])
 			on to the next on on to the next one
 		}
 		*/
-	}	
+		}
+	}
+	else
+	{
+		cout<<"DIRECTORY DOES NOT EXIST"<<endl;
+	}
+	ofstream yamlfile("yamel.txt");
+	yamlfile<<"---"<<endl;
+	yamlfile<<"layout: post"<<endl;
+	yamlfile<<"categories: jekyll update"<<endl;
+	yamlfile<<"title: \"Platform\""<<endl;
+	yamlfile<<"resources:"<<endl;
+	for(int i=0;i<classes.size();i++)
+	{
+		yamlfile<<"  -"<<endl;
+		yamlfile<<"    methods:"<<endl;
+		for(int j=0;j<classes[i].methods.size();j++)
+		{
+			yamlfile<<"      - "<<classes[i].methods[j]<<endl;
+		}
+		yamlfile<<"    name: "<<classes[i].name<<endl;
+	}
+	yamlfile<<"---"<<endl;
+	ofstream marked("2013-6-15-platform.markdown");
+	ifstream yfile("yamel.txt");
+	char linear[1000];
+	while(yfile.good())
+	{
+		yfile.getline(linear,1000);
+		marked<<linear<<endl;
+	}
+	ifstream outfile("output.txt");
+	while(outfile.good())
+	{
+		outfile.getline(linear,1000);
+		marked<<linear<<endl;
+	}
 }

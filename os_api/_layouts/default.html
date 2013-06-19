@@ -19,6 +19,9 @@
         
     </head>
     <body>
+      <div class="sideinfo">
+              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+      </div>
         <div class="container">
           <div  class="site">  
             <div class="header">
@@ -26,18 +29,15 @@
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
-            <div class="sideinfo">
-              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
-            </div>
             <div class="navbar">
               <span class="apicomp">API Components</span>
               </br>
                 <div id="accordion">
                 {% for post in site.posts %}</br>
 
-                <div class = "linked"><a  id="unclicked"  onclick="changeClass();" href="{{ post.url }}">{{ post.title }}</a></div>
+                <div class = "linked"><a  id="unclicked"  href="{{ post.url }}">{{ post.title }}</a></div>
                 <ul class = "content" name="ulist" id="posts">
-                  {% assign @classroom = post.classes %}
+                  {% assign @classroom = post.resources %}
                   {% for class in @classroom %}
           
                   <li><a class="classes" href="{{ post.url }}/#{{ class.name }}">{{ class.name }}</a></li>
@@ -45,8 +45,12 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     {% for method in class.methods %}
+                    {% assign score = method | remove:'get "/' %}
+                    {% assign score = score | remove:'put "/' %}
+                    {% assign score = score | remove:'post "/' %}
+                    {% assign score = score | remove:'delete "/' %}                   
 
-                      <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ method }}"> {{ method }}</a></li>
+                      <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ class.name }}-{{ score | remove:'\'' }}">{{ method }}</a></li>
                     {% endfor %}
                    
                     </ul>

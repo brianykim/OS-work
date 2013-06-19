@@ -2,7 +2,7 @@
 layout: post
 title: "Consumer"
 categories: jekyll update
-classes:
+resources:
   - 
     methods:
       - method

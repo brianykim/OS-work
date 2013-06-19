@@ -10,21 +10,27 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	char dirname[50];
+	char dirname[10] = "./plats/";
 	DIR *dir = NULL;
 	struct dirent *dirt = NULL;
-	dir=opendir("./plats/");
+	dir=opendir(dirname);
 	if(dir)
 	{
 		while(dirt=readdir(dir))
 		{
 			if(strstr(dirt->d_name,".rb"))
 			{
-				
-				ifstream ifile("./plats/testaccounts.rb");
+				char filename[100];
+				strcpy(filename,dirname);
+				strcat(filename,dirt->d_name);
+				ifstream ifile(filename);
 				if(ifile.good())
 				{
 					char x[100];
+					ifile.getline(x,100);
+					ifile.getline(x,100);
+					ifile.getline(x,100);
+					ifile.getline(x,100);
 					ifile.getline(x,100);
 					cout<<x<<endl;
 				}

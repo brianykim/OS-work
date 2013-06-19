@@ -151,12 +151,15 @@ ul.posts span
 }
 .sideinfo
 {
-  right:345px;
+
+  margin-left:1359px;
+  margin-top:50px;
+  float:right;
   position:fixed;
   width:150px;
   overflow-y:auto;
   height: 68%;
-  margin-top:4.75em;
+  margin-top:8.84em;
   display:block;
   background-color:red;
 }

@@ -2,7 +2,7 @@
 layout: post
 title:  "Analytics"
 categories: jekyll update
-classes: 
+resources: 
   - 
     methods: 
       - method1
@@ -33,12 +33,3 @@ puts "Hi, User"
         check_permission!
         Account.reset_serializations!
       end
-{% method accounts %}
-      get "/mine" do
-{% comment %}
-#some sort of description or overview? maybe input tags... idk O_O
-{% endcomment %}
-        output = Account.active.find(current_account.id)
-        output
-      end
-{% endmethod %}       

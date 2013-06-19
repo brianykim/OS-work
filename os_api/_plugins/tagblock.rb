@@ -25,11 +25,12 @@ module Jekyll
 			base=bases.at(1)
 			base.slice!(0)
 			base=base.chomp("\"")
-			output+="<h1 class = 'method' style = 'font-family:Helvetica,sans-serif;font-size:200%;'>#{shown}</h1>"
+			base.slice!(0)
+			output+="<h1 id='#{@text}-#{base}' class = 'method' style = 'font-family:Helvetica,sans-serif;font-size:150%;'>#{shown}</h1>"
 			output+="\n"
 			output+="<h1 class = 'url' style='border-bottom:2 px solid purple'>Resource URL</h1>"
 			output+="\n"
-			output+="api.dev.onescreen.net/v2/#{@text}#{base}"
+			output+="api.dev.onescreen.net/v2/#{@text}/#{base}"
 
 			"#{output}"
 			#{HOW TO GET TO THE TEXT IN BETWEEN THE BLOCK TAGS???}"#{@text}"

@@ -19,6 +19,9 @@
         
     </head>
     <body>
+      <div class="sideinfo">
+              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+      </div>
         <div class="container">
           <div  class="site">  
             <div class="header">
@@ -26,16 +29,13 @@
               <h1 class="title"><a href="/">OneScreen API</a></h1>
               <a class="extra" href="/">Home</a>
             </div>
-            <div class="sideinfo">
-              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
-            </div>
             <div class="navbar">
               <span class="apicomp">API Components</span>
               </br>
                 <div id="accordion">
                 </br>
 
-                <div class = "linked"><a  id="unclicked"  onclick="changeClass();" href="/platform">Platform</a></div>
+                <div class = "linked"><a  id="unclicked"  href="/platform">Platform</a></div>
                 <ul class = "content" name="ulist" id="posts">
                   
                   
@@ -45,17 +45,115 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-
-                      <li><a class="methods" id="get "/mine"" href= "/platform/#get "/mine""> get "/mine"</a></li>
                     
-                   
-                    </ul>
-                  
-          
-                  <li><a class="classes" href="/platform/#ad_formats">ad_formats</a></li>
-                    <ul class="methods">
-                  
-                      <li id="method" style="color:purple">Methods</li>
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/mine"" href= "/platform/#accounts-mine"">get "/mine"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/shared"" href= "/platform/#accounts-shared"">get "/shared"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/audits"" href= "/platform/#accounts-audits"">get "/audits"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/categories"" href= "/platform/#accounts-categories"">get "/categories"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="put "/add_categories"" href= "/platform/#accounts-add_categories"">put "/add_categories"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="put "/remove_categories"" href= "/platform/#accounts-remove_categories"">put "/remove_categories"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/encoder_policies"" href= "/platform/#accounts-encoder_policies"">get "/encoder_policies"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="put "/add_encoder_policies"" href= "/platform/#accounts-add_encoder_policies"">put "/add_encoder_policies"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="put "/remove_encoder_policies"" href= "/platform/#accounts-remove_encoder_policies"">put "/remove_encoder_policies"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="put "/:id"" href= "/platform/#accounts-:id"">put "/:id"</a></li>
                     
                    
                     </ul>
@@ -66,17 +164,39 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/"" href= "/platform/#ad_macros-"">get "/"</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="get "/:id"" href= "/platform/#ad_macros-:id"">get "/:id"</a></li>
+                    
                    
                     </ul>
                   
                   
-                  <!--<li>{"methods"=>["get \"/mine\""], "name"=>"accounts"}{"name"=>"ad_formats"}{"name"=>"ad_macros"}</li>
+                  <!--<li></li>
                   -->
                 </ul> 
                  
                 </br>
 
-                <div class = "linked"><a  id="unclicked"  onclick="changeClass();" href="/data">Analytics</a></div>
+                <div class = "linked"><a  id="unclicked"  href="/data">Analytics</a></div>
                 <ul class = "content" name="ulist" id="posts">
                   
                   
@@ -86,8 +206,16 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
+                    
+                    
+                    
+                    
 
-                      <li><a class="methods" id="method1" href= "/data/#method1"> method1</a></li>
+
+                    
+                    
+
+                      <li><a class="methods" id="method1" href= "/data/#Advertising-method1">method1</a></li>
                     
                    
                     </ul>
@@ -98,23 +226,39 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
-
-                      <li><a class="methods" id="method2" href= "/data/#method2"> method2</a></li>
+                    
+                    
+                    
                     
 
-                      <li><a class="methods" id="method3" href= "/data/#method3"> method3</a></li>
+
+                    
+                    
+
+                      <li><a class="methods" id="method2" href= "/data/#media_graph-method2">method2</a></li>
+                    
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+
+                      <li><a class="methods" id="method3" href= "/data/#media_graph-method3">method3</a></li>
                     
                    
                     </ul>
                   
                   
-                  <!--<li>{"methods"=>["method1"], "name"=>"Advertising"}{"methods"=>["method2", "method3"], "name"=>"media_graph"}</li>
+                  <!--<li></li>
                   -->
                 </ul> 
                  
                 </br>
 
-                <div class = "linked"><a  id="unclicked"  onclick="changeClass();" href="/consumer">Consumer</a></div>
+                <div class = "linked"><a  id="unclicked"  href="/consumer">Consumer</a></div>
                 <ul class = "content" name="ulist" id="posts">
                   
                   
@@ -124,8 +268,16 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
+                    
+                    
+                    
+                    
 
-                      <li><a class="methods" id="method" href= "/consumer/#method"> method</a></li>
+
+                    
+                    
+
+                      <li><a class="methods" id="method" href= "/consumer/#Android-method">method</a></li>
                     
                    
                     </ul>
@@ -136,8 +288,16 @@
                   
                       <li id="method" style="color:purple">Methods</li>
                     
+                    
+                    
+                    
+                    
 
-                      <li><a class="methods" id="method1" href= "/consumer/#method1"> method1</a></li>
+
+                    
+                    
+
+                      <li><a class="methods" id="method1" href= "/consumer/#IOS-method1">method1</a></li>
                     
                    
                     </ul>
@@ -152,7 +312,7 @@
                     </ul>
                   
                   
-                  <!--<li>{"methods"=>["method"], "name"=>"Android"}{"methods"=>["method1"], "name"=>"IOS"}{"methods"=>nil, "name"=>"Roku"}</li>
+                  <!--<li></li>
                   -->
                 </ul> 
                  
@@ -169,8 +329,8 @@
 -->
 <div id="post">
 <h1 id='hi_i_am_a_header'>Hi, I am a header!</h1>
-<h1 class='method' style='font-family:Helvetica,sans-serif;font-size:200%;'>get "/mine"</h1><h1 class='url' style='border-bottom:2 px solid purple'>Resource URL</h1>
-<p>api.dev.onescreen.net/v2//mine Right now it is: 2013-06-17 15:00:37 -0700</p>
+<h1 class='method' id='-mine' style='font-family:Helvetica,sans-serif;font-size:150%;'>get "/mine"</h1><h1 class='url' style='border-bottom:2 px solid purple'>Resource URL</h1>
+<p>api.dev.onescreen.net/v2//mine Right now it is: 2013-06-18 17:19:51 -0700</p>
 </div>
 
             <div class="footer">

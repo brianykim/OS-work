@@ -33,6 +33,10 @@ module OneScreen
     resource :accounts do
 {% endresource %}
 
+      before do 
+        authenticate!
+        check_permission!
+        Account.reset_serializations!
 {% comment %}
       end
 {% endcomment %}
@@ -45,11 +49,6 @@ module OneScreen
         output
       end
 {% endmethod %}
-{% inputs_tag firstparam,description 1:2ndparam,description 2 can be something like oh this parameter works this way %}
-#EXAMPLE REQUEST
-{% highlight ruby %}
- return get('api.dev.onescreen.net/v2/accounts/mine')
-{% endhighlight %}
 {% method accounts %}
       get "/shared" do
         output = Account.active.find(current_account.id)
@@ -329,3 +328,4 @@ module OneScreen
 {% comment %}
 end
 {% endcomment %}
+

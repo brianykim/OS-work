@@ -1,0 +1,23 @@
+---
+layout: post
+categories: jekyll update
+resources:
+  -
+    methods:
+      - get "/mine"
+      - get "/shared"
+      - get "/audits"
+      - get "/categories"
+      - put "/add_categories"
+      - put "/remove_categories"
+      - get "/encoder_policies"
+      - put "/add_encoder_policies"
+      - put "/remove_encoder_policies"
+      - put "/:id"
+    name: accounts
+  -
+    methods:
+      - get "/"
+      - get "/:id"
+    name: ad_macros
+---
