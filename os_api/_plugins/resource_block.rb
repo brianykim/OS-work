@@ -1,15 +1,16 @@
 module Jekyll
 	class ResourceBlock < Liquid::Block
 		def initialize(name,text,tokens)
+			@text=text
 			super
 		end
 		def render(context)
-			@text=super
 			@text=@text.strip
-			words=@text.split
+=begin			words=@text.split
 			desired=words.at(1)
 			desired.slice!(0)
-			"<h1 class='resources' id='#{desired}'>#{desired}</h1>"
+=end			
+			"<h1 class='resources' id='#{@text}'>#{@text}</h1>"
 
 		end
 	end
