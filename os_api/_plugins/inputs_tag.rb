@@ -7,10 +7,10 @@ module Jekyll
 		end
 		def render(context)
 			output ="&#x20;<h1>INPUTS</h1>"
-			inputs = @text.split("--- ")
+			inputs = @text.split("| ")
 			output += "<table id='paras'><tr><th>Parameters</th></tr>"
 			#MAKE A DATA TABLE HERE
-
+			
 			inputs.each do |input|
 				what=input.to_s
 				output+="<tr>"

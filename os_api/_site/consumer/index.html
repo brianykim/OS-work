@@ -8,7 +8,6 @@
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/assets/css/syntax.css">
-
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
@@ -21,6 +20,11 @@
     <body>
       <div class="sideinfo">
               HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+              <form name="login" onsubmit="return validateForm()" action="http://demo_form.asp" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
+                Mediagraph Email: <input type="text" value="@mediagraph.com" name="mediagraphemail"><br>
+                Password: <input type="password" name="pwd">
+                <input type="submit" value="Log In">
+              </form>
       </div>
         <div class="container">
           <div  class="site">  
@@ -112,7 +116,7 @@
 <div id="post">
 <h1 id='hi_i_am_a_header'>Hi, I am a header!</h1>
 
-<p>Right now it is: 2013-06-20 17:57:03 -0700</p>
+<p>Right now it is: 2013-06-21 15:11:30 -0700</p>
 </div>
 
             <div class="footer">

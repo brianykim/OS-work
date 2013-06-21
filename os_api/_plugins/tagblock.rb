@@ -12,22 +12,46 @@ module Jekyll
 			#if @text.includes?("ignore")
 			#end
 			#METHOD WILL HAVE, NAME, DESCRIPTION, METHOD
+
+			output=""
 			@text=@text.strip
-			paras=@text.split(", ")
+			paras=@text.split("; ")
 			nam=paras.at(0)
 			descript=paras.at(1)
-			resurl=paras.at(2)
+			inputs=paras.at(2)
+			resurl=paras.at(3)
 			nameparts=nam.split(": ")
-			descriptionparts=descript.split(": ")
-			resourceurlparts=resurl.split(": ")
 			name=nameparts.at(1)
-			description=descriptionparts.at(1)
-			resourceurl=resourceurlparts.at(1)
-			output=""
 			output+="&#x20;<h1 id='#{name}' class='method'>#{name}</h1>"
-			output+="<h2 class='method_description'>#{description}</h2>"
-			output+="<h1 class = 'url' style='border-bottom:2 px solid purple'>Resource URL</h1>"
+			descriptionparts=descript.split(": ")
+			description=descriptionparts.at(1)
+			output+="&#x20;<h2 class='method_description'>#{description}</h2>"
+			output += "&#x20;<table id='paras'><tr><th>Parameters</th></tr>"
+			inputs.slice!(0..6)
+			inputsparts=inputs.split(" | ")
+			inputsparts.each do |input|
+				parts=input.split("- ")
+				output+="<tr>"
+				for part in parts
+					word =part.to_s()
+					output+="<td>#{word}</td>"
+				end
+				output+="</tr>"
+			end
+			output+="</table>"
+			resourceurlparts=resurl.split(": ")
+			resourceurl=resourceurlparts.at(1)
+			output+="<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
+			
+			
+			
+			
+			
+			
+			
 			output+="#{resourceurl}"
+			output+="&#x20;<div class='interactive' style='display:none'>nothing</div>"
+			#INTERACTIVE BOXES GO HERE? here we introduce the html, and the elements will be accessed by script.js, set boxes initially to display:none?
 			"#{output}"
 
 			#OTHER SECTIONS FOR THIS METHOD WOULD BE....

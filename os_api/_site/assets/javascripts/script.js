@@ -51,7 +51,16 @@
 		*/
 
       
-      
+      function validateForm()
+      {
+        var x=document.forms["login"]["mediagraphemail"].value;
+        var y=document.forms["login"]["pwd"].value;
+        if(x==null||x==""||y==null||y=="")
+        {
+          alert("Please enter a login email that ends with @mediagraph.com and a password.")
+          return false;
+        }
+      }
       //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
       $(document).ready(function() {
 

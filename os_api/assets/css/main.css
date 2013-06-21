@@ -36,6 +36,22 @@ p { margin: 1em 0; }
 a         { color: #00a; }
 a:hover   { color: #000; }
 
+.method{
+
+}
+.method_description{
+  font-size:15px;
+  font-style:normal;
+}
+.resurl
+{
+
+}
+.resources
+{
+  font-size:18px;
+  font-style:underline;
+}
 #paras 
 {
   border-radius:5px;
@@ -47,6 +63,13 @@ a:hover   { color: #000; }
 #paras th{
   border-bottom: 2px solid black;
 
+}
+#posttitle{
+  font-size:30px;
+  font-style:bold;
+}
+#postp{
+  font-size:25px;
 }
 #paras tr{
   

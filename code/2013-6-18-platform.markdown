@@ -13,9 +13,6 @@ resources:
     name: ad_macros
 ---
 
-{% class_name %}
-  class PLATFORM < Grape::API
-{% endclass_name %}
 {% resource accounts %}
 {% method name: mine, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
 {% inputs param1,description 1:param2,description 2 %}
@@ -87,9 +84,6 @@ resources:
 {% comment %}
         # response
 {% endcomment %}
-{% class_name %}
-  class PLATFORM < Grape::API
-{% endclass_name %}
 {% resource ad_macros %}
 {% method name: /, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/ad_formats/ %}
 

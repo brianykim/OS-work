@@ -162,14 +162,14 @@ int main(int argc, char* argv[])
 												ofile<<line<<endl;
 												ofile<<"{% endcomment %}"<<endl;
 											}
-											else if(strstr(line,"class"))
+											/*else if(strstr(line,"class"))
 												{
 													ofile<<"{% class_name %}"<<endl;
 													ofile<<line<<endl;
 													ofile<<"{% endclass_name %}"<<endl;
 												}
 
-												/*else if(strstr(line,"resource"))
+												else if(strstr(line,"resource"))
 													{
 														//string stringent(line);
 														
@@ -237,12 +237,42 @@ int main(int argc, char* argv[])
 							if(strstr(line,"//{%"))
 							{
 								std::string aline(line);
-								aline=aline.substr(1,strlen(line));
+								aline=aline.substr(2,strlen(line));
 								ofile<<aline<<std::endl;
+								if(strstr(line,"{% method "))
+								{
+									//MUST PARSE METHOD TAG FOR THE NAME, the word after the name: 
+									
+									char *namaste = strstr(line,"name: ");
+									string name(namaste);
+									
+									char* waste = strstr(line,", description");
+									name=name.substr(6,name.length()-6-strlen(waste));
+									x.methods.push_back(name);
+									//need a method that will return start position of the , descr so that we can substring it from there... and not form length - 6
+									//UNTIL THE SPACE OF THE NEXT WORD AFTER THE ONE YOU'RE LOOKING FOR, USING %} OR DESCRIPTION
+								}
+								else if(strstr(line,"{% resource "))
+									{
+										char *result = strstr(line,"resource ");
+										string resource(result);
+										resource=resource.substr(9,resource.length()-12);
+										
+
+										//IN THIS CASE, WE NEED TO SUBSTRING AT THE POITN OF THE " %}"
+										x.name=resource;
+								
+									}
+									else if(strstr(line,"//")&&!strstr(line,"{%"))
+											{
+												ofile<<"{% comment %}"<<endl;
+												ofile<<line<<endl;
+												ofile<<"{% endcomment %}"<<endl;
+											}
 							}
 							else
 							{
-								ofile<<line<<std::endl;
+							//	ofile<<line<<std::endl;
 							}
 						}
 					}	

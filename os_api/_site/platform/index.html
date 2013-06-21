@@ -8,7 +8,6 @@
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/assets/css/syntax.css">
-
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
@@ -21,6 +20,11 @@
     <body>
       <div class="sideinfo">
               HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+              <form name="login" onsubmit="return validateForm()" action="http://demo_form.asp" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
+                Mediagraph Email: <input type="text" value="@mediagraph.com" name="mediagraphemail"><br>
+                Password: <input type="password" name="pwd">
+                <input type="submit" value="Log In">
+              </form>
       </div>
         <div class="container">
           <div  class="site">  
@@ -110,13 +114,11 @@
 <!--<p class="meta">28 May 2013</p>
 -->
 <div id="post">
-<p>&#32;<h1 id='PLATFORM'>class PLATFORM</h1> <h1 class='resources' id='accounts'>accounts</h1></p>
+<p>&#32;<h1 id='PLATFORM'>class PLATFORM</h1> &#32;<h1 class='resources' id='accounts'>accounts</h1></p>
 
-<p>&#32;<h1 class='method' id='mine'>mine</h1><h2 class='method_description'>here we go!</h2><h1 class='url' style='border-bottom:2 px solid purple'>Resource URL</h1>www.api.dev.onescreen.com/v2/accounts/mine</p>
+<p>&#32;<h1 class='method' id=' get /mine'> get /mine</h1>&#32;<h2 class='method_description'>METHOD DESCRIPTION HERE</h2>&#32;<table id='paras'><tr><th>Parameters</th></tr><tr><td> param1</td><td>description 1</td></tr><tr><td>param2</td><td>description 2</td></tr><tr><td>param3</td><td>what in the world</td></tr></table><h1 class='resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>www.api.dev.onescreen.com/v2/accounts/mine&#32;<div class='interactive' style='display:none'>nothing</div></p>
 
-<p>&#32;<h1>INPUTS</h1><table id='paras'><tr><th>Parameters</th></tr><tr><td>param1</td><td>description 1, param2</td><td>description 2, param3</td><td>what in the world </td></tr></table></p>
-
-<p>&#32;<h1 id='PLATFORM'>class PLATFORM</h1> <h1 class='resources' id='ad_macros'>ad_macros</h1> &#32;<h1 class='method' id='/'>/</h1><h2 class='method_description'>here we go!</h2><h1 class='url' style='border-bottom:2 px solid purple'>Resource URL</h1>www.api.dev.onescreen.com/v2/ad_formats/</p>
+<p>&#32;<h1 id='PLATFORM'>class PLATFORM</h1> &#32;<h1 class='resources' id='ad_macros'>ad_macros</h1></p>
 </div>
 
             <div class="footer">
