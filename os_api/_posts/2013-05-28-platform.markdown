@@ -17,8 +17,11 @@ resources:
   class PLATFORM < Grape::API
 {% endclass_name %}
 {% resource accounts %}
+
 {% method name: mine, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
-{% inputs param1,description 1:param2,description 2 %}
+
+{% inputs param1: description 1, param2: description 2, param3: what in the world %}
+
 {% comment %}
 #some sort of description or overview? maybe input tags... idk O_O
 {% endcomment %}
