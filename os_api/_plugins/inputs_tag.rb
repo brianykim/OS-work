@@ -28,5 +28,5 @@ module Jekyll
 		end
 	end
 end
-Liquid::Template.register_tag('inputs_tag',Jekyll::InputTag)
+Liquid::Template.register_tag('inputs',Jekyll::InputTag)
 #http://api.dev.onescreen.net

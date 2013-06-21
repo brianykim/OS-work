@@ -16,7 +16,7 @@ module Jekyll
 			@text=@text.chomp(".rb")
 			#store the grape api stuff somewhere??? or nahhhh PROBABLY Not
 			#HERE MAKE TEXT TO EQUAL JUST THE CLASS...
-			"<h1 id='#{primer}'>class #{primer}</h1>"
+			"&#x20;<h1 id='#{primer}'>class #{primer}</h1>"
 			#{}"#{@text}"
 		end
 	end

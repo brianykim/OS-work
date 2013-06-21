@@ -3,12 +3,14 @@ module OneScreen
   class PLATFORM < Grape::API
 
     resource :accounts do
-
+#{% resource accounts %}
       before do 
         authenticate!
         check_permission!
         Account.reset_serializations!
       end
+#{% method name: mine, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
+#{% inputs param1,description 1:param2,description 2 %}
       get "/mine" do
 #some sort of description or overview? maybe input tags... idk O_O
         output = Account.active.find(current_account.id)

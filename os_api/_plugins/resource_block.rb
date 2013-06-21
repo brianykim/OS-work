@@ -1,5 +1,5 @@
 module Jekyll
-	class ResourceBlock < Liquid::Block
+	class ResourceTag < Liquid::Tag
 		def initialize(name,text,tokens)
 			@text=text
 			super
@@ -16,4 +16,4 @@ module Jekyll
 	end
 end
 
-Liquid::Template.register_tag('resource',Jekyll::ResourceBlock)
+Liquid::Template.register_tag('resource',Jekyll::ResourceTag)

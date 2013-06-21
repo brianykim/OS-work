@@ -1,6 +1,5 @@
 module Jekyll
 	class MethodTag < Liquid::Tag
-		include Liquid::StandardFilters
 		def initialize(name,markup,tokens)
 			@text = markup
 			@name = name
@@ -25,13 +24,14 @@ module Jekyll
 			description=descriptionparts.at(1)
 			resourceurl=resourceurlparts.at(1)
 			output=""
-			output+="<h1 id='#{name}'class='method'>#{name}</h1>"
+			output+="&#x20;<h1 id='#{name}' class='method'>#{name}</h1>"
 			output+="<h2 class='method_description'>#{description}</h2>"
 			output+="<h1 class = 'url' style='border-bottom:2 px solid purple'>Resource URL</h1>"
 			output+="#{resourceurl}"
 			"#{output}"
 
-			words = super
+			#OTHER SECTIONS FOR THIS METHOD WOULD BE....
+			#PERMISSIONS? VERSION NUMBER
 			#YOU CAN PARSE TEXT
 		
 =begin			output=""

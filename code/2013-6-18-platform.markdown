@@ -92,3 +92,4 @@ resources:
 {% endclass_name %}
 {% resource ad_macros %}
 {% method name: /, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/ad_formats/ %}
+

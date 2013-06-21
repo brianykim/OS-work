@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		ofstream ofile("output.txt");
+		ofstream ofile("newoutput.txt");
 		////////////////////////////////YAML Data Structures/Generation///////////////////////////
 		//at the end write to file in beginning, then rewrite all file bodies to something else?
 		//these lines below go outside before the directory is traversed,
@@ -37,7 +37,8 @@ int main(int argc, char* argv[])
 		//classes.methods.add(method name)
 
 		////////////////////////////////DIRECTORY TRAVERSING//////////////////////////////////////
-		char dirname[100]=argv[1];//~/api/lib/platform/resources
+		char dirname[100];
+		memcpy(dirname,argv[1],strlen(argv[1]));//~/api/lib/platform/resources
 		DIR *dir = NULL;
 		struct dirent *dirt=NULL;
 		dir=opendir(dirname);
@@ -45,15 +46,17 @@ int main(int argc, char* argv[])
 		{
 			while(dirt=readdir(dir))
 			{
-				if(strstr(dirt->d_name,".rb"))
+				if(strstr(dirt->d_name,".rb")&&!strstr(dirt->d_name,".rb~"))
 				{
 					char filename[100];
 					strcpy(filename,dirname);
+					strcat(filename,"/");
 					strcat(filename,dirt->d_name);
 					ifstream ifile(filename);
 					bool method;
 					int check=0;
 					string hello="";
+					
 					/////////////////////////////////////INDIVIDUAL FILE PARSING//////////////////////////
 					/*if(argc!=2||!(strstr(argv[1],".rb\0")))
 					{
@@ -71,23 +74,37 @@ int main(int argc, char* argv[])
 					if(ifile.good())
 					{
 						Contain x;
-
+						
 						while(ifile.getline(line,1000))	
 						{
-							if(strstr(line,"#{%"))
+							if(strstr(line,"#{% "))
 							{
+								
 								std::string aline(line);
 								aline=aline.substr(1,strlen(line));
-								if(strstr(aline,"{% method "))
+								if(strstr(line,"{% method "))
 								{
 									//MUST PARSE METHOD TAG FOR THE NAME, the word after the name: 
-									string name(aline);
-									name=name.substr()
-									x.method.push_back(name);
+									
+									char *namaste = strstr(line,"name: ");
+									string name(namaste);
+									
+									char* waste = strstr(line,", description");
+									name=name.substr(6,name.length()-6-strlen(waste));
+									x.methods.push_back(name);
+									//need a method that will return start position of the , descr so that we can substring it from there... and not form length - 6
+									//UNTIL THE SPACE OF THE NEXT WORD AFTER THE ONE YOU'RE LOOKING FOR, USING %} OR DESCRIPTION
 								}
-								else if(strstr(aline,"{% resource "))
+								else if(strstr(line,"{% resource "))
 									{
-										the word right after resource
+										char *result = strstr(line,"resource ");
+										string resource(result);
+										resource=resource.substr(9,resource.length()-12);
+										
+
+										//IN THIS CASE, WE NEED TO SUBSTRING AT THE POITN OF THE " %}"
+										x.name=resource;
+								
 									}
 								ofile<<aline<<std::endl;
 							}
@@ -139,7 +156,7 @@ int main(int argc, char* argv[])
 											ofile<<line<<endl;
 											method=true;
 										}*/
-										else if(strstr(line,"#")&&!strstr(line,"{%")||strstr(line,"end")&&!method)
+										else if(strstr(line,"#")&&!strstr(line,"{%"))
 											{
 												ofile<<"{% comment %}"<<endl;
 												ofile<<line<<endl;
@@ -189,7 +206,7 @@ int main(int argc, char* argv[])
 													//else if(strstr(line,"class"))
 													else
 													{
-														ofile<<line<<std::endl;
+														//ofile<<line<<std::endl;
 													}
 								
 						}
@@ -262,7 +279,7 @@ int main(int argc, char* argv[])
 			yamlfile<<"    name: "<<classes[i].name<<endl;
 		}
 		yamlfile<<"---"<<endl;
-		ofstream marked("2013-6-15-platform.markdown");
+		ofstream marked("2013-6-18-platform.markdown");
 		ifstream yfile("yamel.txt");
 		char linear[1000];
 		while(yfile.good())
@@ -270,7 +287,7 @@ int main(int argc, char* argv[])
 			yfile.getline(linear,1000);
 			marked<<linear<<endl;
 		}
-		ifstream outfile("output.txt");
+		ifstream outfile("newoutput.txt");
 		while(outfile.good())
 		{
 			outfile.getline(linear,1000);

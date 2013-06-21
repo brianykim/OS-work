@@ -2,7 +2,7 @@
 layout: post
 title: "Consumer"
 categories: jekyll update
-resources:
+classes:
   - 
     methods:
       - method
@@ -17,10 +17,8 @@ resources:
 ---
 
 #Hi, I am a header!
-{% method name: something, description: here we go, resource_url: will this work? %}
-      get "/mine" do
-#some sort of description or overview? maybe input tags... idk O_O
-        output = Account.active.find(current_account.id)
-        output
-      end
+{% comment %}
+HERE IS THE BODY OF THE MARKDOWN DOCUMENT
+{% endcomment %}
+
 {% render_time Right now it is: %}
