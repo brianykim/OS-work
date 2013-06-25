@@ -1,4 +1,4 @@
-{% resource accounts %}
+ {% resource accounts %}
 {% method name: mine, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
 {% inputs param1,description 1:param2,description 2 %}
 {% comment %}

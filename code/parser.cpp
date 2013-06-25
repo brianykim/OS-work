@@ -79,9 +79,11 @@ int main(int argc, char* argv[])
 						{
 							if(strstr(line,"#{% "))
 							{
-								
 								std::string aline(line);
-								aline=aline.substr(1,strlen(line));
+								//find the position of the # and delete it
+								int pound = aline.find("#");
+								aline.erase(pound,1);
+								//aline=aline.substr(1,strlen(line));
 								if(strstr(line,"{% method "))
 								{
 									//MUST PARSE METHOD TAG FOR THE NAME, the word after the name: 
