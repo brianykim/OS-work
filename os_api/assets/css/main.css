@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:DINPro-Light;
 }
 
 img{
@@ -21,7 +22,7 @@ div{
 }
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 13.34px DINPro-Light, Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 
@@ -36,8 +37,8 @@ p { margin: 1em 0; }
 a         { color: #00a; }
 a:hover   { color: #000; }
 
-.method{
-
+.method {
+  font-size:150%;
 }
 .method_description{
   font-size:15px;
@@ -49,7 +50,7 @@ a:hover   { color: #000; }
 }
 .resources
 {
-  font-size:18px;
+  font-size:200%;
   font-style:underline;
 }
 #paras 
@@ -142,6 +143,7 @@ div ul li, div ul li ul li{
   color:#660000;
   padding-left:10px;
 }
+
 /*.link  {
   display:none;
 }*/
@@ -184,7 +186,7 @@ ul.posts span
   height: 68%;
   margin-top:8.84em;
   display:block;
-  background-color:red;
+  background-color:#E43436;
 }
 .navbar
 {
@@ -193,7 +195,7 @@ ul.posts span
   width:150px;
   position:fixed;
   display:block;
-  background-color:#CCFFFF;
+  background-color:#24B5EE;
   overflow-y: auto;
   margin-left:-150px;
   height:68%;
@@ -232,13 +234,16 @@ ul.posts span
 
   z-index:1;
   display:block;
-  background-color:#D3D3D3;
+  background-color:#808080;
   width: 70em;
   margin-left:-10em;
   position:fixed;
   filter: alpha(opacity=70);
   opacity:.7;
   margin-top:0em;
+}
+#emaillogin{
+  font-family:ITC Avant Garde Pro;
 }
 
 /*(.site .header {

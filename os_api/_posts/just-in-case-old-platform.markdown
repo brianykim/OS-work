@@ -63,3 +63,30 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
+
+&#x20;<table>
+<tr>
+{% assign @classroom = resources %}
+{% for classy in @classroom %}
+{% if classy.name == "resources" %}
+{% for method in classy.methods %}
+<td><a class='methods' id='{{ method }}' href= '{{ post.url }}/#{{ classy.name }}-{{ method }}'>{{ method }}</a></td>
+{% endfor %}
+{% endif %}
+{% endfor %}
+</tr></table>
+
+
+
+<ul class="methods">
+<li id="method" style="color:purple">Methods</li>
+{% for class in resources %}
+{% if class.name=="accounts" %}
+{% for method in class.methods %}
+             
+
+<li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ class.name }}-{{ score | remove:'\'' }}">{{ method }}</a></li>
+{% endfor %}
+{% endif %}
+{% endfor %}
+</ul>

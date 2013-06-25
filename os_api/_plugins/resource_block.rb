@@ -10,8 +10,15 @@ module Jekyll
 			desired=words.at(1)
 			desired.slice!(0)
 =end		
+			res=@text.split(": ")
+			name=res.at(0)
+			descript=res.at(1)
+
+
 			output="&#x20;"	
-			output+="<h1 class='resources' id='#{@text}'>#{@text}</h1>"
+			output+="<h1 class='resources' id='#{name}'>#{name}</h1>"
+			output+="<h2 class='resourcedescription'>#{descript}</h2>"
+
 =begin			output+="&#x20;<table>"
 			output+="&#x20;<tr>"
 			output+="{% assign @classroom = post.resources %}"

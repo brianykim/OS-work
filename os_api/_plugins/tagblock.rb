@@ -20,37 +20,52 @@ module Jekyll
 			descript=paras.at(1)
 			inputs=paras.at(2)
 			resurl=paras.at(3)
+			res=paras.at(4)
+			versionnumber=paras.at(5)
+			number=versionnumber.split(": ")
+			version=number.at(1)
+			resour=res.split(": ")
+			source=resour.at(1)
 			nameparts=nam.split(": ")
 			name=nameparts.at(1)
-			output+="&#x20;<h1 id='#{name}' class='method'>#{name}</h1>"
+			nameid=name.slice(name)
+			nameid.slice!("get ")
+			nameid.slice!("post ")
+			nameid.slice!("put ")
+			nameid.slice!("delete ")
+			nameid.slice!("\"")
+			nameid.slice!("/")
+			nameid.slice!("\\")
+			output+="&#x20;<h1 id='#{source}-#{nameid}' class='method'>#{name}</h1>"
 			descriptionparts=descript.split(": ")
 			description=descriptionparts.at(1)
 			output+="&#x20;<h2 class='method_description'>#{description}</h2>"
 			output += "&#x20;<table id='paras'><tr><th>Parameters</th></tr>"
 			inputs.slice!(0..6)
-			inputsparts=inputs.split(" | ")
-			inputsparts.each do |input|
-				parts=input.split("- ")
-				output+="<tr>"
-				for part in parts
-					word =part.to_s()
-					output+="<td>#{word}</td>"
+			if !inputs.strip.empty?
+				inputsparts=inputs.split(" | ")
+				inputsparts.each do |input|
+					parts=input.split("- ")
+					output+="<tr>"
+					for part in parts
+						word =part.to_s()
+						output+="<td>#{word}</td>"
+					end
+					output+="</tr>"
 				end
-				output+="</tr>"
+			else
+				"<tr><td>NONE<td></tr>"
 			end
 			output+="</table>"
 			resourceurlparts=resurl.split(": ")
 			resourceurl=resourceurlparts.at(1)
-			output+="<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
-			
-			
-			
-			
-			
-			
-			
+			output+="&#x20;<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
 			output+="#{resourceurl}"
 			output+="&#x20;<div class='interactive' style='display:none'>nothing</div>"
+			if name.include? 'get '
+				#OUTPUT INTERACTIVE THINGS HERE FOR THE BOX based on parameters and the resource url
+				output+=""
+			end
 			#INTERACTIVE BOXES GO HERE? here we introduce the html, and the elements will be accessed by script.js, set boxes initially to display:none?
 			"#{output}"
 

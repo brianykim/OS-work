@@ -16,9 +16,9 @@ resources:
 {% class_name %}
   class PLATFORM < Grape::API
 {% endclass_name %}
-{% resource accounts %}
+{% resource accounts: What the resource "accounts" is about goes here. %}
 
-{% method name:  get /mine; description: METHOD DESCRIPTION HERE; inputs: param1- description 1 | param2- description 2 | param3- what in the world; resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
+{% method name: get "/mine"; description: METHOD DESCRIPTION HERE; inputs: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world; resource_url: www.api.dev.onescreen.com/v2/accounts/mine; resource: accounts; version: 2.0; permission: Public with API Key/Secret %}
 
 {% comment %}
 #some sort of description or overview? maybe input tags... idk O_O
