@@ -16,12 +16,36 @@ module Jekyll
 			output=""
 			@text=@text.strip
 			paras=@text.split("; ")
-			nam=paras.at(0)
+			for para in paras
+				if para.include? 'name:'
+					nam=para
+				end
+				if para.include? 'description:'
+					descript=para
+				end
+				if para.include? 'inputs:'
+					inputs=para
+				end
+				if para.include? 'resource_url:'
+					resurl=para
+				end
+				if para.include? 'resource:'
+					res=para
+				end
+				if para.include? 'version:'
+					versionnumber=para
+				end
+				if para.include? 'permissions:'
+					permission=para
+				end
+			end
+=begin			nam=paras.at(0)
 			descript=paras.at(1)
 			inputs=paras.at(2)
 			resurl=paras.at(3)
 			res=paras.at(4)
 			versionnumber=paras.at(5)
+=end
 			number=versionnumber.split(": ")
 			version=number.at(1)
 			resour=res.split(": ")

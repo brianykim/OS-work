@@ -55,15 +55,25 @@
       {
         var x=document.forms["login"]["mediagraphemail"].value;
         var y=document.forms["login"]["pwd"].value;
+        var atpos=x.indexOf("@");
+        var dotpos=x.lastIndexOf(".");
+        
         if(x==null||x==""||y==null||y=="")
         {
           alert("Please enter a login email that ends with @mediagraph.com and a password.")
           return false;
         }
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+        {
+          alert("Not a valid e-mail address");
+          return false;
+        }
       }
       function tryAPI()
       {
-        
+//        var xhr= new XMLHttpRequest();
+//HOW TO GET THE VARIABLES FROM THE INPUTS? ahhh based on document.forms and put those into varaibles. yup, but how to get resourceurl
+  //      resource_url+=?firstparam=herewego&2ndparam=haha&3rdparam=lowcool;
       }
             //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
       $(document).ready(function() {

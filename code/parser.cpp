@@ -239,7 +239,8 @@ int main(int argc, char* argv[])
 							if(strstr(line,"//{%"))
 							{
 								std::string aline(line);
-								aline=aline.substr(2,strlen(line));
+								int slashslash = aline.find("//");
+								aline.erase(slashslash,2);
 								ofile<<aline<<std::endl;
 								if(strstr(line,"{% method "))
 								{

@@ -20,7 +20,7 @@
     <body>
       <div class="sideinfo">
               HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
-              <form name="login" onsubmit="return validateForm()" action="http://demo_form.asp" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
+              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
                 Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
                 Password: <input type="password" name="pwd">
                 <input type="submit" value="Log In">
@@ -137,9 +137,7 @@
       get
     </a></span><span class="path"><a class="toggleOperation" href="#!/dictionaries/listEntries_get_0">
       /entries
-    </a></span></h3><ul class="options"><li><a class="toggleOperation" href="#!/dictionaries/listEntries_get_0">
-      List entries available in dictionaries
-    </a></li></ul></div><div id="dictionaries_listEntries_get_0_content" class="content" style="display: block;"><form class="sandbox" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"></div><h4>
+    </a></span></h3></div><div id="dictionaries_listEntries_get_0_content" class="content" style="display: block;"><form onsubmit="return tryAPI()" class="sandbox" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"></div><h4>
       Parameters
     </h4>
     <table class="fullwidth"><thead><tr>
@@ -158,16 +156,16 @@
     </tr></thead>
     <tbody class="operation-params">
     <tr><td class="code">
-      headword
+      parameter 1
     </td>
     <td><input type="text" value="" placeholder="" name="headword" minlength="0"></input></td><td>
-      Search for entries with the given headword
+      Search for field
     </td>
     <td><span class="model-signature">
       string
     </span></td></tr>
     <tr><td class="code">
-      _opts
+      options
     </td>
     <td><select name="_opts"><option value="" selected=""></option>
     	<option value="starts">
@@ -183,7 +181,7 @@
       contains
     </option></select></td>
     <td>
-      Specify how to search for headword
+      Specify field
     </td>
     <td><span class="model-signature">
       string
