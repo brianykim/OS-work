@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BASE_DIR=/home/local/OFFICE/bkim
+cd $BASE_DIR/code
+g++ -g parser.cpp -o parser
+./parser plats/
+cd $BASE_DIR/os_api
+jekyll build
+jekyll serve
