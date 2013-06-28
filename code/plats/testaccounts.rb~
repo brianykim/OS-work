@@ -3,7 +3,7 @@ module OneScreen
   class PLATFORM < Grape::API
 
     resource :accounts do
-#{% resource accounts %}
+ #{% resource accounts %}
       before do 
         authenticate!
         check_permission!

@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
 								int pound = aline.find("#");
 								aline.erase(pound,1);
 								//aline=aline.substr(1,strlen(line));
-								if(strstr(line,"{% method "))
+								if(strstr(line,"{% method "))//MOVE THIS BLOCK TO =BEGIN AND =END FINDER OF A /* AND */ FINDER
 								{
 									//MUST PARSE METHOD TAG FOR THE NAME, the word after the name: 
 									

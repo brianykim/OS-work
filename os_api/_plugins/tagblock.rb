@@ -1,5 +1,5 @@
 module Jekyll
-	class MethodTag < Liquid::Tag
+	class MethodBlock < Liquid::Block
 		def initialize(name,markup,tokens)
 			@text = markup
 			@name = name
@@ -14,16 +14,18 @@ module Jekyll
 			#METHOD WILL HAVE, NAME, DESCRIPTION, METHOD
 
 			output=""
+			@text=super
 			@text=@text.strip
-			paras=@text.split("; ")
+			paras=@text.split(";\n")
 			for para in paras
+				para=para.strip
 				if para.include? 'name:'
 					nam=para
 				end
 				if para.include? 'description:'
 					descript=para
 				end
-				if para.include? 'inputs:'
+				if para.include? 'parameters:'
 					inputs=para
 				end
 				if para.include? 'resource_url:'
@@ -121,4 +123,4 @@ module Jekyll
 	end
 end
 
-Liquid::Template.register_tag('method',Jekyll::MethodTag)
+Liquid::Template.register_tag('method',Jekyll::MethodBlock)
