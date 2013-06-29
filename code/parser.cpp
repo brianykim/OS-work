@@ -74,26 +74,46 @@ int main(int argc, char* argv[])
 					if(ifile.good())
 					{
 						Contain x;
+						bool block=false;
 						
 						while(ifile.getline(line,1000))	
 						{
-							if(strstr(line,"#{% "))
+							if(block)
+							{
+								if(strstr(line,"name: "))
+								{
+									char *namaste = strstr(line,"name: ");
+									string name(namaste);
+									char* waste = strstr(line,";");
+									name=name.substr(6,name.length()-6-strlen(waste));
+									x.methods.push_back(name);
+								}
+								if(strstr(line,"=end")&&!strstr(line," =end"))
+								{
+									block=false;
+								}
+								else
+								{
+									ofile<<line<<endl;
+								}
+							}
+							if(strstr(line,"=begin")&&!strstr(line," =begin"))
+							{
+									block=true;
+							}
+							else if(strstr(line,"#{% "))
 							{
 								std::string aline(line);
 								//find the position of the # and delete it
 								int pound = aline.find("#");
 								aline.erase(pound,1);
 								//aline=aline.substr(1,strlen(line));
+								
 								if(strstr(line,"{% method "))//MOVE THIS BLOCK TO =BEGIN AND =END FINDER OF A /* AND */ FINDER
 								{
 									//MUST PARSE METHOD TAG FOR THE NAME, the word after the name: 
 									
-									char *namaste = strstr(line,"name: ");
-									string name(namaste);
 									
-									char* waste = strstr(line,", description");
-									name=name.substr(6,name.length()-6-strlen(waste));
-									x.methods.push_back(name);
 									//need a method that will return start position of the , descr so that we can substring it from there... and not form length - 6
 									//UNTIL THE SPACE OF THE NEXT WORD AFTER THE ONE YOU'RE LOOKING FOR, USING %} OR DESCRIPTION
 								}
@@ -158,7 +178,7 @@ int main(int argc, char* argv[])
 											ofile<<line<<endl;
 											method=true;
 										}*/
-										else if(strstr(line,"#")&&!strstr(line,"{%"))
+										else if(strstr(line,"#")&&!strstr(line,"#{%"))
 											{
 												ofile<<"{% comment %}"<<endl;
 												ofile<<line<<endl;

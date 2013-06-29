@@ -5,17 +5,23 @@ title: "Platform"
 resources:
   -
     methods:
-      - mine
-    name: accounts
+      - get "/mine"
+    name: accounts: Description
   -
     methods:
-      - /
     name: ad_macros
 ---
 
- {% resource accounts %}
-{% method name: mine, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/accounts/mine %}
-{% inputs param1,description 1:param2,description 2 %}
+ {% resource accounts: Description %}
+{% method %}
+name: get "/mine";
+description: METHOD DESCRIPTION HERE;
+inputs: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world;
+resource: accounts;
+version: 2.0;
+permission: Public with API Key/Secret;
+resource_url: www.api.dev.onescreen.com/v2/accounts/mine
+{% endmethod %}
 {% comment %}
 #some sort of description or overview? maybe input tags... idk O_O
 {% endcomment %}

@@ -5,10 +5,9 @@ title: "Platform"
 resources:
   -
     methods:
-      - mine
-    name: accounts
+      - get "/mine"
+    name: accounts: Description
   -
     methods:
-      - /
     name: ad_macros
 ---

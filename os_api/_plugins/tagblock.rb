@@ -14,6 +14,13 @@ module Jekyll
 			#METHOD WILL HAVE, NAME, DESCRIPTION, METHOD
 
 			output=""
+			nam=""
+			descript=""
+			inputs=""
+			resurl=""
+			res=""
+			versionnumber=""
+			permission=""
 			@text=super
 			@text=@text.strip
 			paras=@text.split(";\n")
@@ -48,26 +55,37 @@ module Jekyll
 			res=paras.at(4)
 			versionnumber=paras.at(5)
 =end
-			number=versionnumber.split(": ")
-			version=number.at(1)
 			resour=res.split(": ")
 			source=resour.at(1)
-			nameparts=nam.split(": ")
-			name=nameparts.at(1)
-			nameid=name.slice(name)
-			nameid.slice!("get ")
-			nameid.slice!("post ")
-			nameid.slice!("put ")
-			nameid.slice!("delete ")
-			nameid.slice!("\"")
-			nameid.slice!("/")
-			nameid.slice!("\\")
-			output+="&#x20;<h1 id='#{source}-#{nameid}' class='method'>#{name}</h1>"
-			descriptionparts=descript.split(": ")
-			description=descriptionparts.at(1)
-			output+="&#x20;<h2 class='method_description'>#{description}</h2>"
-			output += "&#x20;<table id='paras'><tr><th>Parameters</th></tr>"
-			inputs.slice!(0..6)
+			#DISPLAY THE NAME
+			if !nam.empty?
+				nameparts=nam.split(": ")
+				name=nameparts.at(1)
+				nameid=name.slice(name)
+				nameid.slice!("get ")
+				nameid.slice!("post ")
+				nameid.slice!("put ")
+				nameid.slice!("delete ")
+				nameid.slice!("\"")
+				nameid.slice!("/")
+				nameid.slice!("\\")
+				output+="&#x20;<h1 id='#{source}-#{nameid}' class='method'>#{name}</h1>"
+			end
+			#DISPLAY VERSION NUMBER
+			if !versionnumber.empty?
+				number=versionnumber.split(": ")
+				version=number.at(1)
+				output+="&#x20;<p class='version'>API VERSION: #{version}</p>"
+			end
+			#DISPLAY DESCRIPTION
+			if !descript.empty?
+				descriptionparts=descript.split(": ")
+				description=descriptionparts.at(1)
+				output+="&#x20;<h2 class='method_description'>#{description}</h2>"
+			end
+			#DISPLAY THE PARAMETERS
+			output += "&#x20;<table class='paras'><tr><th>Parameters</th></tr>"
+			inputs.slice!(0..11)
 			if !inputs.strip.empty?
 				inputsparts=inputs.split(" | ")
 				inputsparts.each do |input|
@@ -83,10 +101,11 @@ module Jekyll
 				"<tr><td>NONE<td></tr>"
 			end
 			output+="</table>"
+			#DISPLAY THE RESOURCE URL
 			resourceurlparts=resurl.split(": ")
 			resourceurl=resourceurlparts.at(1)
 			output+="&#x20;<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
-			output+="#{resourceurl}"
+			output+="&#x20;<p class ='resurllink'>#{resourceurl}</p>"
 			output+="&#x20;<div class='interactive' style='display:none'>nothing</div>"
 			if name.include? 'get '
 				#OUTPUT INTERACTIVE THINGS HERE FOR THE BOX based on parameters and the resource url

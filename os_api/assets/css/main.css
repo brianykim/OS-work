@@ -28,18 +28,37 @@ body {
 
 }
 
+h1
+{
+  margin-bottom: 1em;
+}
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
-h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
 a         { color: #00a; }
 a:hover   { color: #000; }
 
+.logo {
+  height:26px;
+  width:180px;
+  display:inline;
+  padding-right:50px;
+  margin:7px 0;
+  font-size: 20px;
+  font-weight: 200;
+  color: #777777;
+  text-shadow:0 1px 0 #ffffff;
+  background: url('../img/onescreen_logo_light.png') no-repeat;
+}
+
 .method {
   font-size:150%;
 }
+.version, .method_description, .paras, .resurl, .resurllink{
+  
+} 
 .method_description{
   font-size:15px;
   font-style:normal;
@@ -52,16 +71,20 @@ a:hover   { color: #000; }
 {
   font-size:200%;
   font-style:underline;
+  border-bottom: 3px solid #5d1E86;
+  border-collapse: separate;
+  border-spacing:4px;
+
 }
-#paras 
+.paras 
 {
   border-radius:5px;
   border-width: 0px;
   border-color:red;
-  background-color:silver;
+  background-color:#e7e7e7;
   width:600px;
 }
-#paras th{
+.paras th{
   border-bottom: 2px solid black;
 
 }
@@ -72,10 +95,10 @@ a:hover   { color: #000; }
 #postp{
   font-size:25px;
 }
-#paras tr{
+.paras tr{
   
 }
-#paras tr td{
+.paras tr td{
 
  
  text-align:left;
@@ -101,6 +124,14 @@ div ul li, div ul li ul li{
   border-bottom-color: black;
   border-bottom-width: 2px;
   cursor:pointer;
+
+}
+#interactive{
+  margin-top:1.5em;
+  margin-bottom: 1.5em;
+}
+.resurllink{
+  border-bottom:solid #A02A5C 3px;
 
 }
 #unclicked
@@ -177,11 +208,11 @@ ul.posts span
 .sideinfo
 {
 
-  margin-left:1359px;
+  margin-left:1329px;
   margin-top:50px;
   float:right;
   position:fixed;
-  width:150px;
+  width:175px;
   overflow-y:auto;
   height: 68%;
   margin-top:8.84em;
@@ -199,7 +230,7 @@ ul.posts span
   overflow-y: auto;
   margin-left:-150px;
   height:68%;
-  margin-top:4.75em;
+  margin-top:4.72em;
 }
 .navbar ul li{
   color:#0000CC;
@@ -208,11 +239,13 @@ ul.posts span
 
 
 #posttitle{
-  margin-top:3em;
+  
   margin-left:15px;
 }
 #postp{
+  margin-top:2em;
   margin-left:15px;
+  font-size:200%;
 }
 #post{
   margin-left:30px;

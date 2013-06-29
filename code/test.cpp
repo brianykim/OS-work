@@ -10,7 +10,14 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	char dirname[10] = "./plats/";
+	int x=0;
+	if(x==0)
+	{
+		int y=x;
+	}
+	cout<<y<<endl;
+}
+/*	char dirname[10] = "./plats/";
 	DIR *dir = NULL;
 	struct dirent *dirt = NULL;
 	dir=opendir(dirname);
