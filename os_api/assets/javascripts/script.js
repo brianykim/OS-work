@@ -69,6 +69,7 @@
           return false;
         }
       }
+      //find all child elements of resource elements in navbar, and parse their id's and .append them into a div under each of the resource descriptions...?
       function tryAPI()
       {
 //        var xhr= new XMLHttpRequest();

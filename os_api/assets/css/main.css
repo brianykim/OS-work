@@ -52,7 +52,10 @@ a:hover   { color: #000; }
   text-shadow:0 1px 0 #ffffff;
   background: url('../img/onescreen_logo_light.png') no-repeat;
 }
-
+.logopic{
+  filter: alpha(opacity=100);
+  opacity:1;
+}
 .method {
   font-size:150%;
 }
@@ -71,7 +74,7 @@ a:hover   { color: #000; }
 {
   font-size:200%;
   font-style:underline;
-  border-bottom: 3px solid #5d1E86;
+  border-bottom: 4px solid #5d1E86;
   border-collapse: separate;
   border-spacing:4px;
 
@@ -175,6 +178,9 @@ div ul li, div ul li ul li{
   padding-left:10px;
 }
 
+#companyinfo{
+  font-family:ITC Avant Garde Pro;
+}
 /*.link  {
   display:none;
 }*/

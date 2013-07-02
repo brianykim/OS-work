@@ -44,8 +44,11 @@ module Jekyll
 				if para.include? 'version:'
 					versionnumber=para
 				end
-				if para.include? 'permissions:'
+				if para.include? 'permission:'
 					permission=para
+				end
+				if para.include? 'properties:'
+					properties=para
 				end
 			end
 =begin			nam=paras.at(0)
@@ -62,6 +65,7 @@ module Jekyll
 				nameparts=nam.split(": ")
 				name=nameparts.at(1)
 				nameid=name.slice(name)
+				nameid.chomp!("\"")
 				nameid.slice!("get ")
 				nameid.slice!("post ")
 				nameid.slice!("put ")
@@ -75,7 +79,12 @@ module Jekyll
 			if !versionnumber.empty?
 				number=versionnumber.split(": ")
 				version=number.at(1)
-				output+="&#x20;<p class='version'>API VERSION: #{version}</p>"
+				output+="&#x20;<p class='version'><strong>API VERSION: </strong>#{version}</p>"
+			end
+			if !permission.empty?
+				permiss=permission.split(": ")
+				perm=permiss.at(1)
+				output+="&#x20;<p class = 'permission'><strong>Permissions: </strong>#{perm}</p>"
 			end
 			#DISPLAY DESCRIPTION
 			if !descript.empty?

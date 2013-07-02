@@ -38,10 +38,10 @@ int main(int argc, char* argv[])
 
 		////////////////////////////////DIRECTORY TRAVERSING//////////////////////////////////////
 		char dirname[100];
-		memcpy(dirname,argv[1],strlen(argv[1]));//~/api/lib/platform/resources
-		DIR *dir = NULL;
+		memcpy(dirname,argv[1],100);//~/api/lib/platform/resources
+
 		struct dirent *dirt=NULL;
-		dir=opendir(dirname);
+		DIR *dir=opendir(dirname);
 		if(dir)
 		{
 			while(dirt=readdir(dir))
@@ -240,7 +240,7 @@ int main(int argc, char* argv[])
 						std::cout<<"File does not exist"<<std::endl;
 					}*/
 				}
-				if(strstr(dirt->d_name,".js"))
+				if(strstr(dirt->d_name,".js")||strstr(dirt->d_name,".java")||strstr(dirt->d_name,".cpp"))
 				{
 					char filename[100];
 					strcpy(filename,dirname);
@@ -310,41 +310,49 @@ int main(int argc, char* argv[])
 			}
 			*/
 			}
+			ofstream yamlfile("yamel.txt");
+			yamlfile<<"---"<<endl;
+			yamlfile<<"layout: post"<<endl;
+			yamlfile<<"categories: jekyll update"<<endl;
+			yamlfile<<"title: \"";
+			string directname(dirname);
+			directname=directname.substr(2,strlen(dirname)-2);
+			yamlfile<<directname<<"\""<<endl;
+
+			yamlfile<<"resources:"<<endl;
+			for(int i=0;i<classes.size();i++)
+			{
+				yamlfile<<"  -"<<endl;
+				yamlfile<<"    methods:"<<endl;
+				for(int j=0;j<classes[i].methods.size();j++)
+				{
+					yamlfile<<"      - "<<classes[i].methods[j]<<endl;
+				}
+				yamlfile<<"    name: "<<classes[i].name<<endl;
+			}
+			yamlfile<<"---"<<endl;
+			string outname ="2013-6-18-";
+			outname+=directname;
+			outname+=".markdown";
+			ofstream marked(outname.c_str());
+			ifstream yfile("yamel.txt");
+			char linear[1000];
+			while(yfile.good())
+			{
+				yfile.getline(linear,1000);
+				marked<<linear<<endl;
+			}
+			ifstream outfile("newoutput.txt");
+			while(outfile.good())
+			{
+				outfile.getline(linear,1000);
+				marked<<linear<<endl;
+			}
 		}
 		else
 		{
 			cout<<"DIRECTORY DOES NOT EXIST"<<endl;
 		}
-		ofstream yamlfile("yamel.txt");
-		yamlfile<<"---"<<endl;
-		yamlfile<<"layout: post"<<endl;
-		yamlfile<<"categories: jekyll update"<<endl;
-		yamlfile<<"title: \"Platform\""<<endl;
-		yamlfile<<"resources:"<<endl;
-		for(int i=0;i<classes.size();i++)
-		{
-			yamlfile<<"  -"<<endl;
-			yamlfile<<"    methods:"<<endl;
-			for(int j=0;j<classes[i].methods.size();j++)
-			{
-				yamlfile<<"      - "<<classes[i].methods[j]<<endl;
-			}
-			yamlfile<<"    name: "<<classes[i].name<<endl;
-		}
-		yamlfile<<"---"<<endl;
-		ofstream marked("2013-6-18-platform.markdown");
-		ifstream yfile("yamel.txt");
-		char linear[1000];
-		while(yfile.good())
-		{
-			yfile.getline(linear,1000);
-			marked<<linear<<endl;
-		}
-		ifstream outfile("newoutput.txt");
-		while(outfile.good())
-		{
-			outfile.getline(linear,1000);
-			marked<<linear<<endl;
-		}
+		
 	}
 }

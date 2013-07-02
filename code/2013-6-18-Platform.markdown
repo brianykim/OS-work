@@ -5,49 +5,23 @@ title: "Platform"
 resources:
   -
     methods:
-      - mine
-    name: accounts
+      - get "/mine"
+    name: accounts: Description
   -
     methods:
-      - /
     name: ad_macros
 ---
-#THE PLATFORM CLASS DEALS WITH.............
 
-{% resource accounts: What the resource "accounts" is about goes here. %}
-
+ {% resource accounts: Description %}
 {% method %}
 name: get "/mine";
 description: METHOD DESCRIPTION HERE;
-parameters: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world;
+inputs: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world;
 resource: accounts;
 version: 2.0;
 permission: Public with API Key/Secret;
 resource_url: www.api.dev.onescreen.com/v2/accounts/mine
 {% endmethod %}
-
-{% method %}
-name: get "/id";
-description: METHOD DESCRIPTION HERE;
-parameters: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world;
-resource: accounts;
-version: 2.0;
-permission: Public with API Key/Secret;
-resource_url: www.api.dev.onescreen.com/v2/accounts/mine
-{% endmethod %}
-
-{% resource ad_macros: AD MACROS IS ABOUT MACRO SIZED ADS %}
-
-{% method %}
-name: get "/something";
-description: METHOD DESCRIPTION HERE;
-parameters: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world is this madness;
-resource: accounts;
-version: 2.0;
-permission: Public with API Key/Secret;
-resource_url: www.api.dev.onescreen.com/v2/accounts/mine
-{% endmethod %}
-
 {% comment %}
 #some sort of description or overview? maybe input tags... idk O_O
 {% endcomment %}
@@ -116,4 +90,6 @@ resource_url: www.api.dev.onescreen.com/v2/accounts/mine
 {% comment %}
         # response
 {% endcomment %}
+{% resource ad_macros %}
+{% method name: /, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/ad_formats/ %}
 
