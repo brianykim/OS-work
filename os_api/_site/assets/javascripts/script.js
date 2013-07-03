@@ -76,6 +76,23 @@
 //HOW TO GET THE VARIABLES FROM THE INPUTS? ahhh based on document.forms and put those into varaibles. yup, but how to get resourceurl
   //      resource_url+=?firstparam=herewego&2ndparam=haha&3rdparam=lowcool;
       }
+      function loadXMLDoc()
+      {
+        var xhr;
+        if(window.XMLHttpRequest)
+        {
+          xhr=new XMLHttpRequest();
+        }
+        xhr.onreadystatechange=function()
+        {
+          if(xhr.readyState==4&&shr.status==200)
+          {
+            document.getElementById("sideinfo").innerHTML=xhr.responseText;
+          }
+        }
+        xhr.open("GET","../assets/ajax_info.txt",true);
+        xhr.send();
+      }
             //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
       $(document).ready(function() {
 

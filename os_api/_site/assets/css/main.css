@@ -17,7 +17,7 @@ img{
 }
 html, body { overflow: auto; height: 100%; width:100%; background-color: #6666CC;}
 div{
-  border-radius:5px;
+
   
 }
 body {
@@ -107,6 +107,19 @@ a:hover   { color: #000; }
  text-align:left;
  padding: 25px;
 }
+.largebutton{
+
+  background-color:#0093DB;
+  padding: 21px 35px 32px 35px;
+  font-size: 16px;
+  color:#FFFFFF;
+}
+.OSbutton{
+  background-color:#0093DB;
+  padding:2px 3px;
+  color:#FFFFFF;
+  font-size:14px;
+}
 pre{
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
@@ -178,9 +191,7 @@ div ul li, div ul li ul li{
   padding-left:10px;
 }
 
-#companyinfo{
-  font-family:ITC Avant Garde Pro;
-}
+
 /*.link  {
   display:none;
 }*/
@@ -234,7 +245,7 @@ ul.posts span
   display:block;
   background-color:#24B5EE;
   overflow-y: auto;
-  margin-left:-150px;
+  margin-left:-149px;
   height:68%;
   margin-top:4.72em;
 }
@@ -336,8 +347,12 @@ ul.posts span
   margin-left:30px;
 }
 
+#companyinfo{
+  font-family:ITC Avant Garde Pro;
+}
+
 .site .footer .contact {
-  float: left;
+  float:left;
   margin-right: 3em;
 }
 

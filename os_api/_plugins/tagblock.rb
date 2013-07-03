@@ -115,10 +115,22 @@ module Jekyll
 			resourceurl=resourceurlparts.at(1)
 			output+="&#x20;<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
 			output+="&#x20;<p class ='resurllink'>#{resourceurl}</p>"
-			output+="&#x20;<div class='interactive' style='display:none'>nothing</div>"
+			
 			if name.include? 'get '
+				#output+="&#x20;<div class='interactive' style='display:none'>"
+				#MAKE THINGS BASED ON PARAMETERS
 				#OUTPUT INTERACTIVE THINGS HERE FOR THE BOX based on parameters and the resource url
-				output+=""
+				#output+="&#x20;<ul id='' class='endpoints' style=''><li class='endpoint'><ul class='operations'><li id='dictionaries_listEntries_get_0' class='get operation'><div class=heading'>"
+				#output+="<h3><span class='http_method'>#{name}</a></span></h3></div>"
+				#output+="<div id='dictionaries_listEntries_get_0_content' class='content' style='display: block;'><form onsubmit='return tryAPI()' class='sandbox' accept-charset='UTF-8'>"
+				#output+="<div style='margin:0;padding:0;display:inline'></div><h4>Parameters</h4><table class='fullwidth'><thead><tr><th style='width: 100px; max-width: 100px'>Parameter</th>"
+				#output+="<th style='width: 310px; max-width: 310px'>Value</th><th style='width: 200px; max-width: 200px'>Description</th><th style='width: 320px; max-width: 330px'>Data Type"
+    			#output+="</th></tr></thead></table></div>"
+    #inputsparts
+    			for part in inputsparts
+    				#1st part is name, 2nd is type, 3rd is description
+    				#NEXT PART IS THE INPUT SECTION, INPUT FORM? 
+    			end
 			end
 			#INTERACTIVE BOXES GO HERE? here we introduce the html, and the elements will be accessed by script.js, set boxes initially to display:none?
 			"#{output}"

@@ -23,14 +23,14 @@
               <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
                 Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
                 Password: <input type="password" name="pwd">
-                <input type="submit" value="Log In">
+                <input class = "OSbutton"type="submit" value="Log In">
               </form>
       </div>
         <div class="container">
           <div  class="site">  
             <div class="header">
               <a class="logo" href="http://www.onescreen.com"><img class="logopic" src="http://www.onescreen.com/wp-content/themes/NewOneScreen/images/onescreen_logo.png"/></a>
-              <h1 class="title"><a href="/">OneScreen API Home</a></h1>
+              <h1 class="title"><a class="largebutton" href="/">ONESCREEN API HOME</a></h1>
             </div>
             <div class="navbar">
               <span class="apicomp">API Components</span>
@@ -51,7 +51,9 @@
                     {% assign score = method | remove:'get "/' %}
                     {% assign score = score | remove:'put "/' %}
                     {% assign score = score | remove:'post "/' %}
-                    {% assign score = score | remove:'delete "/' %}                   
+                    {% assign score = score | remove:'delete "/' %}
+                    {% assign score = score | remove:'"' %}
+                    {% assign score = score | remove:'/' %}                   
 
                       <li><a class="methods" id="{{ method }}" href= "{{ post.url }}/#{{ class.name }}-{{ score | remove:'\'' }}">{{ method }}</a></li>
                     {% endfor %}
