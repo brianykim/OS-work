@@ -37,7 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p { margin: 1em 0; }
 
-a         { color: #00a; }
+a         { color: #00a;
+
+top:-200px;
+ }
 a:hover   { color: #000; }
 
 .logo {
@@ -113,12 +116,15 @@ a:hover   { color: #000; }
   padding: 21px 35px 32px 35px;
   font-size: 16px;
   color:#FFFFFF;
+
 }
 .OSbutton{
-  background-color:#0093DB;
+  margin-top:2em;
+  background-color:#61A72F;
   padding:2px 3px;
   color:#FFFFFF;
   font-size:14px;
+  border-style: none;
 }
 pre{
   font: 13.34px Helvetica, Arial, sans-serif;
@@ -234,7 +240,8 @@ ul.posts span
   height: 68%;
   margin-top:8.84em;
   display:block;
-  background-color:#E43436;
+  /*background-color:#E43436;
+*/background-color:#FFFFFF;
 }
 .navbar
 {
@@ -243,7 +250,10 @@ ul.posts span
   width:150px;
   position:fixed;
   display:block;
+  /*
   background-color:#24B5EE;
+  */
+  background-color:#FFFFFF;
   overflow-y: auto;
   margin-left:-149px;
   height:68%;
@@ -285,12 +295,11 @@ ul.posts span
   z-index:1;
   display:block;
   background-color:#808080;
-  width: 70em;
-  margin-left:-10em;
+  width: 100%;
+  
   position:fixed;
   filter: alpha(opacity=70);
   opacity:.7;
-  margin-top:0em;
 }
 #emaillogin{
   font-family:ITC Avant Garde Pro;

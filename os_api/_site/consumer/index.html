@@ -19,11 +19,13 @@
     </head>
     <body>
       <div class="sideinfo">
+      </br>
               HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
-              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post"><!--WHAT GOES ON INSIDE ACTION??? -->
+            </br>
+              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post" ><!--  WHAT GOES ON INSIDE ACTION??? 
                 Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
-                Password: <input type="password" name="pwd">
-                <input class = "OSbutton"type="submit" value="Log In">
+                Password: <input type="password" name="pwd">-->
+                <input class = "OSbutton"type="submit" onclick="loadXMLDoc()" value="LOG INTO MEDIAGRAPH!">
               </form>
       </div>
         <div class="container">
@@ -33,6 +35,7 @@
               <h1 class="title"><a class="largebutton" href="/">ONESCREEN API HOME</a></h1>
             </div>
             <div class="navbar">
+            </br>
               <span class="apicomp">API Components</span>
               </br>
                 <div id="accordion">
@@ -120,7 +123,7 @@
 <div id="post">
 <h1 id='hi_i_am_a_header'>Hi, I am a header!</h1>
 
-<p>Right now it is: 2013-07-02 17:45:52 -0700</p>
+<p>Right now it is: 2013-07-03 17:55:27 -0700</p>
 </div>
 
             <div class="footer">

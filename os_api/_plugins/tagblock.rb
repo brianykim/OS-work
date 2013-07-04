@@ -103,6 +103,7 @@ module Jekyll
 					for part in parts
 						word =part.to_s()
 						output+="<td>#{word}</td>"
+
 					end
 					output+="</tr>"
 				end
@@ -116,8 +117,18 @@ module Jekyll
 			output+="&#x20;<h1 class = 'resurl' style='border-bottom:2 px solid purple'>Resource URL</h1>"
 			output+="&#x20;<p class ='resurllink'>#{resourceurl}</p>"
 			
-			if name.include? 'get '
-				#output+="&#x20;<div class='interactive' style='display:none'>"
+=begin			if name.include? 'get '
+				output+="&#x20;<div class='interactive' style='display:none'>"
+				output+="<table><tr><th>Name</th><th>Input</th></tr>"
+				inputsparts.each do |input|
+					parts=input.split("- ")
+					output+="&#x20;<tr>"
+					
+					word =parts.at(1).to_s()
+					output+="&#x20;<td>#{word}</td>"
+					output+="&#x20;<td><input name='#{word}' value ='' type='text'></input></td>"
+				end
+				output+="</tr></table>"
 				#MAKE THINGS BASED ON PARAMETERS
 				#OUTPUT INTERACTIVE THINGS HERE FOR THE BOX based on parameters and the resource url
 				#output+="&#x20;<ul id='' class='endpoints' style=''><li class='endpoint'><ul class='operations'><li id='dictionaries_listEntries_get_0' class='get operation'><div class=heading'>"
@@ -125,14 +136,12 @@ module Jekyll
 				#output+="<div id='dictionaries_listEntries_get_0_content' class='content' style='display: block;'><form onsubmit='return tryAPI()' class='sandbox' accept-charset='UTF-8'>"
 				#output+="<div style='margin:0;padding:0;display:inline'></div><h4>Parameters</h4><table class='fullwidth'><thead><tr><th style='width: 100px; max-width: 100px'>Parameter</th>"
 				#output+="<th style='width: 310px; max-width: 310px'>Value</th><th style='width: 200px; max-width: 200px'>Description</th><th style='width: 320px; max-width: 330px'>Data Type"
-    			#output+="</th></tr></thead></table></div>"
-    #inputsparts
-    			for part in inputsparts
-    				#1st part is name, 2nd is type, 3rd is description
-    				#NEXT PART IS THE INPUT SECTION, INPUT FORM? 
-    			end
+    			#output+="</th></tr></thead></table>nothing"
+    			output+="</div>"
+   #inputsparts
+    			
 			end
-			#INTERACTIVE BOXES GO HERE? here we introduce the html, and the elements will be accessed by script.js, set boxes initially to display:none?
+=end 			#INTERACTIVE BOXES GO HERE? here we introduce the html, and the elements will be accessed by script.js, set boxes initially to display:none?
 			"#{output}"
 
 			#OTHER SECTIONS FOR THIS METHOD WOULD BE....

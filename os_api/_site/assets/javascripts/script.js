@@ -85,12 +85,12 @@
         }
         xhr.onreadystatechange=function()
         {
-          if(xhr.readyState==4&&shr.status==200)
+          if(xhr.readyState==4&&xhr.status==200)
           {
             document.getElementById("sideinfo").innerHTML=xhr.responseText;
           }
         }
-        xhr.open("GET","../assets/ajax_info.txt",true);
+        xhr.open("GET","../assets/ajax/ajaxtest.txt",true);
         xhr.send();
       }
             //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
