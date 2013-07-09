@@ -1,0 +1,12 @@
+ {% resource accounts: Description %}
+{% method %}
+name: get "/mine";
+description: METHOD DESCRIPTION HERE;
+inputs: param1- string- description 1 | param2- int- description 2 | param3- array- what in the world;
+resource: accounts;
+version: 2.0;
+permission: Public with API Key/Secret;
+resource_url: www.api.dev.onescreen.com/v2/accounts/mine
+{% endmethod %}
+{% comment %}
+{% endcomment %}

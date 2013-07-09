@@ -25,8 +25,10 @@
               <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post" ><!--  WHAT GOES ON INSIDE ACTION??? 
                 Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
                 Password: <input type="password" name="pwd">-->
-                <input class = "OSbutton"type="submit" onclick="loadXMLDoc()" value="LOG INTO MEDIAGRAPH!">
+                <input class = "OSbutton"type="submit" value="LOG INTO MEDIAGRAPH!">
               </form>
+              <button type="button" onclick="loadXMLDoc()">Request data</button>
+              <div id="myDiv"></div>
       </div>
         <div class="container">
           <div  class="site">  

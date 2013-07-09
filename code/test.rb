@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 def testthis
 	x=2;
 	if x==2

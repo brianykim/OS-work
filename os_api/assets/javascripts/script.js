@@ -79,20 +79,23 @@
       function loadXMLDoc()
       {
         var xhr;
-        if(window.XMLHttpRequest)
+        if(window.XMLHttpRequest())
         {
           xhr=new XMLHttpRequest();
         }
         xhr.onreadystatechange=function()
         {
-          if(xhr.readyState==4&&xhr.status==200)
+          //if(xhr.readyState==4&&xhr.status==200)
+          if(xhr.status!=404)
           {
-            document.getElementById("sideinfo").innerHTML=xhr.responseText;
+            document.getElementById("myDiv").innerHTML=xhr.responseText;
           }
         }
-        xhr.open("GET","../assets/ajax/ajaxtest.txt",true);
-        xhr.send();
-      }
+        
+     
+      xhr.open("GET","http://cdn.onescreen.net/rtm/ios-silo.json",true);
+      xhr.send();
+       }
             //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
       $(document).ready(function() {
 

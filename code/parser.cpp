@@ -295,6 +295,7 @@ int main(int argc, char* argv[])
 							}
 							else
 							{
+								//WE NEED TO INCLUDE REGEX EXPRESSION FINDING FOR /* */ AND =BEGIN AND =END FOR BLOCK COMMENTS
 							//	ofile<<line<<std::endl;
 							}
 						}
