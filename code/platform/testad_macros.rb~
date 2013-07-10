@@ -1,7 +1,7 @@
 module OneScreen
 
   class PLATFORM < Grape::API
-
+#{% resource ad_macros %}
     resource :ad_macros do
 
       before do

@@ -112,8 +112,9 @@ a:hover   { color: #000; }
 }
 .largebutton{
 
+  margin-left:300px;
   background-color:#0093DB;
-  padding: 21px 35px 32px 35px;
+  padding: 19px 35px 25px 35px;
   font-size: 16px;
   color:#FFFFFF;
 
@@ -294,12 +295,15 @@ ul.posts span
 
   z-index:1;
   display:block;
-  background-color:#808080;
+  background-color:white;
   width: 100%;
-  
-  position:fixed;
+  position:absolute;
   filter: alpha(opacity=70);
   opacity:.7;
+  margin-left:-152px;
+  box-shadow: 4px 4px 2px #888888;
+ /* margin-left: -608px;
+*/
 }
 #emaillogin{
   font-family:ITC Avant Garde Pro;
