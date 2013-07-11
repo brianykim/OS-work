@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:DINPro-Light;
+  font-family:DINPro-Light,Helvetica;
 }
 
 img{
@@ -23,6 +23,7 @@ div{
 body {
   background-color: #FFF;
   font: 13.34px DINPro-Light, Helvetica, Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-size: small;
   text-align: center;
 
@@ -126,6 +127,9 @@ a:hover   { color: #000; }
   color:#FFFFFF;
   font-size:14px;
   border-style: none;
+}
+.OSbutton:hover{
+  background-color:#69B532;
 }
 pre{
   font: 13.34px Helvetica, Arial, sans-serif;

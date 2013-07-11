@@ -52,6 +52,13 @@ def parsing
 							name=name.chomp(";")
 							container[resname].push(name)
 						end
+						if line.include? "@name "
+							nameline=line
+							nameline.strip
+							#namelineparts=nameline.split()
+							#name=namelineparts.at(1)
+							#name=name.strip
+
 
 						output.puts(line)
 					end
@@ -85,6 +92,7 @@ def parsing
 						container[resname]
 
 					end
+					
 					output.puts(line)
 				else
 					if line.include? "{% "
