@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>OneScreen API</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/assets/css/syntax.css">
@@ -12,11 +12,17 @@
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <link href='http://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'>
+        
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="/assets/javascripts/script.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        
+       
+        <!--BOOT STRAP
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <script src="/assets/javascripts/bootstrap.min.js"></script>
+      -->
     </head>
     <body>
       <div class="sideinfo">
@@ -34,7 +40,7 @@
         <div class="container">
           <div  class="site">  
             <div class="header">
-              <a class="logo" href="http://www.onescreen.com"><img class="logopic" src="http://www.onescreen.com/wp-content/themes/NewOneScreen/images/onescreen_logo.png"/></a>
+              <a class="logo" href="http://www.onescreen.com"><img id="logopic" src="/assets/img/onescreen_logo_light.png"/></a>
               <h1 class="title"><a class="largebutton" href="/">ONESCREEN API HOME</a></h1>
             </div>
             <div class="navbar">
@@ -43,12 +49,13 @@
               </br>
                 <div id="accordion">
                 </br>
-
+                 
                 <div class = "linked"><a  id="unclicked"  href="/platform">Platform</a></div>
                 <ul class = "content" name="ulist" id="posts">
                   
                   
-          
+                  
+                 
                   <li><a class="classes" href="/platform/#accounts">accounts</a></li>
                     <ul class="methods">
                   
@@ -66,7 +73,7 @@
                    
                     </ul>
                   
-          
+                 
                   <li><a class="classes" href="/platform/#ad_macros">ad_macros</a></li>
                     <ul class="methods">
                   
@@ -89,10 +96,17 @@
                   -->
                 </ul> 
                  
+                 
                 </br>
-
+                 
+                 
+                 <div class = "linked"><a id="unclicked" href="http://share.onescreen.co/resources/HelpDocuments/index.html">Java</a></div>
+                 
+                </br>
+                 
                 <div class = "linked"><a  id="unclicked"  href="/data">Data</a></div>
                 <ul class = "content" name="ulist" id="posts">
+                  
                   
                   
                   
@@ -100,10 +114,12 @@
                   -->
                 </ul> 
                  
+                 
                 </br>
-
+                 
                 <div class = "linked"><a  id="unclicked"  href="/consumer">Consumer</a></div>
                 <ul class = "content" name="ulist" id="posts">
+                  
                   
                   
                   
@@ -111,11 +127,13 @@
                   -->
                 </ul> 
                  
+                 
                 
                </div>
             </div>
                 <!--<img src="http://www.onescreen.com/files/carousel_connect1.jpg"/>-->
                 <div id="home">
+</br>
   <h1>Welcome to the OneScreen API for Ruby Developers</h1>
   	<p>
   	In today’s connected culture, audiences expect to see video everywhere they travel in the digital space and on every device they use. Unfortunately, the video products and services market is fragmented-  leaving media companies to piece together a roster of vendors to launch a profitable video strategy.  OneScreen serves our customers as an integration hub for many parts of the video ecosystem.  OneScreen’s 	adaptive technology solutions make it simple for publishers connect to where, when, and how their audience is watching with integrations for well-known and emerging platforms.</p>
@@ -205,20 +223,19 @@
     <td><span class="model-signature">
       string
     </span></td></tr></tbody></table>
-    <div class="sandbox_header"><input class="submit" type="button" value="Try it out!" name="commit"></input><a class="response_hider" style="display: none;" href="#">
+    <div class="sandbox_header"><input onclick="ajaxsubmit()" class="submit" type="button" value="Try it out!" name="commit"></input><a class="response_hider" style="display: none;" href="#">
       Hide Response
-    </a><img class="response_throbber" style="display: none;" src="http://developer.pearson.com/wp-content/themes/pearson-developer-2013/swagger/images/throbber.gif" alt="Throbber"></img></div></form>
+    </a></div></form>
     <div class="response" style="">
     	<h4>
       http://cdn.onescreen.net/rtm/ios-silo.json
     </h4>
     <div class="block request_url"><pre> … </pre></div>
-    <div id="myDiv">
     	<h4>
 	   	   Response Body
    		</h4>
-    </div>
-    <div class="block response_body undefined" ><pre class="xml"><code> NEED JAVASCRIPT TO MAKE API CALL AND OUTPUT RESULT </code></pre></div>
+   
+    <div class="block response_body undefined" ><pre class="xml"><code>  <div id="myDiv"> NEED JAVASCRIPT TO MAKE API CALL AND OUTPUT RESULT  </div></code></pre></div>
     <h4>
       Response Code
     </h4>

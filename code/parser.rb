@@ -58,7 +58,7 @@ def parsing
 							#namelineparts=nameline.split()
 							#name=namelineparts.at(1)
 							#name=name.strip
-
+						end
 
 						output.puts(line)
 					end

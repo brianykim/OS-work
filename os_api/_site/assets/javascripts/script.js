@@ -91,11 +91,31 @@
             document.getElementById("myDiv").innerHTML=xhr.responseText;
           }
         }
-        
+      
      
-      xhr.open("GET","http://cdn.onescreen.net/rtm/ios-silo.json",true);
-      xhr.send();
-       }
+       xhr.open("GET","http://cdn.onescreen.net/rtm/ios-silo.json",true);
+        xhr.send();
+      }
+
+       $(document).ready(function(){
+        $('.submit').click(function(){
+          $.get('http://cdn.onescreen.net/rtm/ios-silo.json',function(result){
+            $('#myDiv').html(result);
+            alert(result);
+          });
+        });
+      });
+
+      function ajaxsubmit(){
+        $.ajax({
+          url: "http://cdn.onescreen.net/rtm/ios-silo.json",
+          type: "GET",
+          dataType: "text"
+        }).success(function(data){
+          $('#myDiv').html(data);
+        });
+      }
+    
             //WE HAVE TO BE ABLE TO CHANGE TO ACCORDION STYLE MENUS.... MAKE THIS SO BRIAN, MAKE THIS SO
       $(document).ready(function() {
 
