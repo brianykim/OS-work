@@ -7,7 +7,7 @@
 /* Global Reset */
 @font-face {
        font-family: DINPro-Light;
-       src: url('http://www.onescreen.com/wp-content/themes/NewOneScreen/fonts/DINPro-Light.otf');
+       src: url('../fonts/DINPro-Light.otf');
     }
 * {
   margin: 0;
@@ -27,7 +27,7 @@ div{
 }
 body {
   background-color: white;
-  font: 13.34px DINPro-Light, Helvetica, Arial, sans-serif;
+  font: 13.34px DINPro-Light,sans-serif;
   font-size: small;
   text-align: center;
 
@@ -239,7 +239,7 @@ ul.posts span
 .apicomp{
   font-size:18px;
 }
-.sideinfo
+#sideinfo
 {
   left:85%;
   /*margin-left:1329px;*/
@@ -254,7 +254,7 @@ ul.posts span
   /*background-color:#E43436;
 */background-color:#FFFFFF;
 }
-.navbar
+#navbar
 {
 
   float:left;

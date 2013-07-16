@@ -97,14 +97,14 @@
         xhr.send();
       }
 
-       $(document).ready(function(){
+       /*$(document).ready(function(){
         $('.submit').click(function(){
           $.get('http://cdn.onescreen.net/rtm/ios-silo.json',function(result){
-            $('#myDiv').html(result);
+            $('#myDiv').html(result.adTag);
             alert(result);
           });
         });
-      });
+      });*/
 
       function ajaxsubmit(){
         $.ajax({
