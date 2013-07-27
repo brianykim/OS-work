@@ -2,11 +2,10 @@
 require 'json'
 require 'neography'
 
-=begin
 Neography.configure do |config|
 	config.protocol = "http://"
 	config.server = "localhost"
-	confit.port = 7474
+	config.port = 7474
 	config.directory = ""
 	config.cypher_path ="/cypher"
 	config.gremlin_path = "/ext/GremlinPlugin/graphdb/execute_script"
@@ -15,14 +14,13 @@ Neography.configure do |config|
 	config.max_threads = 20
 	config.authentication = nil
 	config.username = nil
-	config.passowrd = nil
+	config.password = nil
 	config.parser = MultiJsonParser
 end
-=end
 
 #STRIP [] THEN FIND },{ AND SPLIT BY THE COMMAS, THEN JSON PARSE EACH ONE
 def runit
-	#@neo = Neography::Rest.new
+	@neo = Neography::Rest.new
 	file=File.open("php/output.txt","r")
 	lines=IO.readlines(file)
 	
