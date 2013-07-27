@@ -2,6 +2,7 @@
 require 'json'
 require 'neography'
 
+=begin
 Neography.configure do |config|
 	config.protocol = "http://"
 	config.server = "localhost"
@@ -17,11 +18,11 @@ Neography.configure do |config|
 	config.passowrd = nil
 	config.parser = MultiJsonParser
 end
-
+=end
 
 #STRIP [] THEN FIND },{ AND SPLIT BY THE COMMAS, THEN JSON PARSE EACH ONE
 def runit
-	@neo = Neography::Rest.new
+	#@neo = Neography::Rest.new
 	file=File.open("php/output.txt","r")
 	lines=IO.readlines(file)
 	
@@ -34,7 +35,7 @@ def runit
 		for part in parts
 			part+="}"
 			what=JSON.parse(part)
-			node1=@neo.create_node(what)
+			#node1=@neo.create_node(what)
 			puts what["account_alias"]
 		end
 	end
