@@ -27,7 +27,7 @@ $name = "O'Neill";
 $name_es = mysql_real_escape_string($name);
 $query = "INSERT INTO AUTHORS(Name) VALUES('$name_es')";
 #$query = sprintf("SELECT Id, Name, Price From Cars Where Name = '%s'",mysql_real_escape_string($name));
-
+$query = "COMMIT"
 $rs = mysql_query($query);
 
 if(!$rs)

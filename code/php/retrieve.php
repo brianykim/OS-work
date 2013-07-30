@@ -46,7 +46,9 @@ if(!$rs)
 	echo " ";
 	echo $row -> Price;
 	echo "\n";
-}*/
+}
+START person=node:persons("name:*") RETURN person.name, count(*)
+ORDER BY person.name*/
 /*
 $nrows=mysql_num_rows($rs);
 

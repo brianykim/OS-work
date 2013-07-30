@@ -9,7 +9,7 @@ Neography.configure do |config|
 	config.directory = ""
 	config.cypher_path ="/cypher"
 	config.gremlin_path = "/ext/GremlinPlugin/graphdb/execute_script"
-	config.log_file = "noegraphy.log"
+	config.log_file = "neography.log"
 	config.log_enabled = false
 	config.max_threads = 20
 	config.authentication = nil
@@ -21,6 +21,7 @@ end
 #STRIP [] THEN FIND },{ AND SPLIT BY THE COMMAS, THEN JSON PARSE EACH ONE
 def runit
 	@neo = Neography::Rest.new
+	
 	file=File.open("php/output.txt","r")
 	lines=IO.readlines(file)
 	
@@ -33,6 +34,13 @@ def runit
 		for part in parts
 			part+="}"
 			what=JSON.parse(part)
+			props=what.keys
+			node=@neo.create_node()
+			for prop in props
+				if not "#{prop}"==nil and not what["#{prop}"]==nil
+					@neo.set_node_properties(node,{"#{prop}" => what["#{prop}"]})
+				end
+			end
 			#node1=@neo.create_node(what)
 			puts what["account_alias"]
 		end
