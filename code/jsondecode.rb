@@ -50,45 +50,48 @@ runit
 
 
 =begin
-	account_alias
-	address1
-	address2
-	admin_id
-	adserver_account_token_publisher
+	-account_alias
+	-address1
+	-address2
+	-admin_id
+	-adserver_account_token_publisher
+	-adserver_account_token_advertiser
 	agencies_agreement
 	aggregators_agreement
 	branded_logo_url
-	city
-	country
-	created_at
+	-city
+	-country
+	-created_at
 	deactivated_at
 	default_playlist_ttl
 	default_video_policy
-	fax
-	has_advertising_access
-	id
-	is_active
-	is_adsever_public
-	marketplace
-	modified_at
-	namespace_account_id
+	-fax
+	-has_advertising_access
+	-has_publishing_access
+	-has_content_access
+	-id
+	-is_active
+	-is_adsever_public
+	-marketplace
+	-modified_at
+	-namespace_account_id
 	networks_agreement
-	new_console
-	organization
-	os_account_manager_id
-	os_sales_rep_id
-	owner_account_id
-	passthrough_destination_id
-	passthrough_playlist_id
-	passthrough_widget_id
-	phone
-	podio_item_id
-	postal_code
-	primary_website
-	referer_account_id
-	sponsor_account_id
+	-new_console
+	-organization
+	-os_account_manager_id
+	-os_sales_rep_id
+	-owner_account_id
+	-passthrough_destination_id
+	-passthrough_playlist_id
+	-passthrough_widget_id
+	-phone
+	-podio_item_id
+	-postal_code
+	-primary_website
+	-referer_account_id
+	-sponsor_account_id
 	sponsored_logo_url
-	state
+	-state
 	tax_identifier
 	user_id
 	redirector_settings

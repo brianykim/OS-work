@@ -520,3 +520,68 @@ CYPHER: class org.neo4j.server.webadmin.console.CypherSessionCreator
 
 Jul 29, 2013 6:00:26 PM org.neo4j.server.logging.Logger log
 INFO: Neo4j Server shutdown initiated by kill signal
+Jul 30, 2013 10:08:58 AM org.neo4j.server.logging.Logger log
+INFO: Setting startup timeout to: 120000ms based on -1
+Jul 30, 2013 10:08:58 AM org.neo4j.server.logging.Logger log
+INFO: Loaded neo4j tuning properties from conf/neo4j.properties
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Successfully started database
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Starting Neo Server on port [7474] with [40] threads available
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Enabling HTTPS on port [7473]
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Mounted discovery module at [/]
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Mounted REST API at [/db/data/]
+Jul 30, 2013 10:08:59 AM org.neo4j.server.logging.Logger log
+INFO: Mounted management API at [/db/manage/]
+Jul 30, 2013 10:09:00 AM org.neo4j.server.logging.Logger log
+INFO: Mounted webadmin at [/webadmin]
+Jul 30, 2013 10:09:00 AM org.neo4j.server.logging.Logger log
+INFO: Mounting static content at [/webadmin] from [webadmin-html]
+Jul 30, 2013 10:09:00 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.webadmin.rest
+Jul 30, 2013 10:09:00 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.neo4j.server.webadmin.rest.MonitorService
+  class org.neo4j.server.webadmin.rest.RootService
+  class org.neo4j.server.webadmin.rest.console.ConsoleService
+  class org.neo4j.server.webadmin.rest.JmxService
+Jul 30, 2013 10:09:00 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Jul 30, 2013 10:09:00 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.web
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.neo4j.server.rest.web.DatabaseMetadataService
+  class org.neo4j.server.rest.web.ResourcesService
+  class org.neo4j.server.rest.web.BatchOperationService
+  class org.neo4j.server.rest.web.ExtensionService
+  class org.neo4j.server.rest.web.TransactionalService
+  class org.neo4j.server.rest.web.RestfulGraphDatabase
+  class org.neo4j.server.rest.web.CypherService
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Jul 30, 2013 10:09:01 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO: Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.discovery
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO: Root resource classes found:
+  class org.neo4j.server.rest.discovery.DiscoveryService
+Jul 30, 2013 10:09:01 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO: No provider classes found.
+Jul 30, 2013 10:09:01 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+Jul 30, 2013 10:09:02 AM org.neo4j.server.logging.Logger log
+INFO: Server started on [http://localhost:7474/]
+Jul 30, 2013 10:10:11 AM org.neo4j.server.logging.Logger log
+INFO: Available console sessions: SHELL: class org.neo4j.server.webadmin.console.ShellSessionCreator
+CYPHER: class org.neo4j.server.webadmin.console.CypherSessionCreator
+
