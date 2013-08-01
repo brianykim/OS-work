@@ -37,8 +37,12 @@ def runit
 			props=what.keys
 			node=@neo.create_node()
 			for prop in props
+				begin
 				if not "#{prop}"==nil and not what["#{prop}"]==nil
 					@neo.set_node_properties(node,{"#{prop}" => what["#{prop}"]})
+				end
+				rescue Neography::PropertyValueException
+					next
 				end
 			end
 			#node1=@neo.create_node(what)
