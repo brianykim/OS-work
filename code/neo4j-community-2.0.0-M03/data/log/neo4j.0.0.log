@@ -585,3 +585,5 @@ Jul 30, 2013 10:10:11 AM org.neo4j.server.logging.Logger log
 INFO: Available console sessions: SHELL: class org.neo4j.server.webadmin.console.ShellSessionCreator
 CYPHER: class org.neo4j.server.webadmin.console.CypherSessionCreator
 
+Aug 01, 2013 5:41:03 PM org.neo4j.server.logging.Logger log
+INFO: Neo4j Server shutdown initiated by kill signal

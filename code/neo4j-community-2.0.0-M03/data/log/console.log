@@ -202,3 +202,6 @@ CYPHER: class org.neo4j.server.webadmin.console.CypherSessionCreator
 7/30/13 10:10:11 AM org.neo4j.server.webadmin.rest.console.SessionFactoryImpl INFO: Available console sessions: SHELL: class org.neo4j.server.webadmin.console.ShellSessionCreator
 CYPHER: class org.neo4j.server.webadmin.console.CypherSessionCreator
 
+8/1/13 5:41:03 PM org.neo4j.server.CommunityBootstrapper INFO: Neo4j Server shutdown initiated by kill signal
+17:41:03.301 [Thread-9] INFO  org.mortbay.log - Stopped SslSocketConnector@localhost:7473
+17:41:03.373 [Thread-9] INFO  org.mortbay.log - Stopped SelectChannelConnector@localhost:7474

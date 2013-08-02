@@ -3696,3 +3696,34 @@ Caused by: org.neo4j.graphdb.ConstraintViolationException: Node record Node[0,us
 2013-07-31 19:34:58.180+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 166ms [total block time: 2.918s]
 2013-07-31 23:48:32.387+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 8495ms [total block time: 11.413s]
 2013-08-01 00:40:43.989+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 113ms [total block time: 11.526s]
+2013-08-01 17:04:29.398+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 173ms [total block time: 11.699s]
+2013-08-01 17:20:19.551+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 203ms [total block time: 11.902s]
+2013-08-01 18:11:31.119+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 256ms [total block time: 12.158s]
+2013-08-01 19:58:28.985+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 914ms [total block time: 13.072s]
+2013-08-01 21:29:15.592+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 205ms [total block time: 13.277s]
+2013-08-01 22:36:28.028+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 197ms [total block time: 13.474s]
+2013-08-01 22:36:34.329+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 488ms [total block time: 13.962s]
+2013-08-01 22:39:05.033+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 354ms [total block time: 14.316s]
+2013-08-01 22:46:38.540+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor: Application threads blocked for an additional 4722ms [total block time: 19.038s]
+2013-08-02 00:41:03.468+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: Stopping - database is now unavailable
+2013-08-02 00:41:03.480+0000 INFO  [o.n.k.EmbeddedGraphDatabase]: GC Monitor stopped. 
+2013-08-02 00:41:03.875+0000 INFO  [o.n.k.i.t.x.XaLogicalLog]: Closed log data/graph.db/index/lucene.log
+2013-08-02 00:41:04.017+0000 INFO  [o.n.k.i.t.TxManager]: TM shutting down
+2013-08-02 00:41:04.211+0000 INFO  [o.n.k.i.t.x.XaLogicalLog]: Closed log data/graph.db/nioneo_logical.log
+2013-08-02 00:41:04.240+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.relationshiptypestore.db.names hit=0 miss=6 switches=0 ooe=0
+2013-08-02 00:41:04.409+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.relationshiptypestore.db hit=0 miss=3 switches=0 ooe=0
+2013-08-02 00:41:04.497+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.labeltokenstore.db.names hit=0 miss=2 switches=0 ooe=0
+2013-08-02 00:41:04.598+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.labeltokenstore.db hit=0 miss=1 switches=0 ooe=0
+2013-08-02 00:41:04.709+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.propertystore.db.strings hit=12389 miss=0 switches=0 ooe=0
+2013-08-02 00:41:04.798+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.propertystore.db.index.keys hit=0 miss=100 switches=0 ooe=0
+2013-08-02 00:41:04.887+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.propertystore.db.index hit=0 miss=50 switches=0 ooe=0
+2013-08-02 00:41:04.954+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2013-08-02 00:41:05.055+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.propertystore.db hit=184981 miss=55 switches=0 ooe=0
+2013-08-02 00:41:05.143+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.relationshipstore.db hit=16 miss=10 switches=0 ooe=0
+2013-08-02 00:41:05.277+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.nodestore.db.labels hit=0 miss=0 switches=0 ooe=0
+2013-08-02 00:41:05.399+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.nodestore.db hit=3399686 miss=50000 switches=0 ooe=0
+2013-08-02 00:41:05.522+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore.schemastore.db hit=0 miss=0 switches=0 ooe=0
+2013-08-02 00:41:05.611+0000 INFO  [o.n.k.i.n.s.StoreFactory]: data/graph.db/neostore hit=0 miss=71910 switches=0 ooe=0
+2013-08-02 00:41:05.700+0000 INFO  [o.n.k.i.n.x.NeoStoreXaDataSource]: NeoStore closed
+2013-08-02 00:41:05.700+0000 INFO  [o.n.k.i.DiagnosticsManager]: --- STOPPING diagnostics START ---
+2013-08-02 00:41:05.701+0000 INFO  [o.n.k.i.DiagnosticsManager]: --- STOPPING diagnostics END ---

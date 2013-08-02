@@ -17,7 +17,7 @@ def parsing
 			output=File.open("rubyoutput.txt","w")
 			directory.each do |filename|
 				
-				#to check if comment block has been encountered
+				#to check if comment block been has encountered
 				block=false
 				liquidblock=false
 				#File.open(filename)

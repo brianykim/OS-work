@@ -20,16 +20,21 @@ end
 
 def deleteemall
 	@neo=Neography::Rest.new
-	n=9814
+	n=7
 	while n<9840
-		if @neo.get_node(n).exist? 
+		begin 
 			node=@neo.get_node(n)
 			rels=@neo.get_node_relationships(node)
 			#for rel in rels
-			@neo.delete_relationship(rels)
+			for rel in rels
+				@neo.delete_relationship(rel)
+			end
 			#end
 			@neo.delete_node(node)
 			n=n+1
+		rescue Neography::NodeNotFoundException
+			n=n+1
+			next
 		end
 	end
 	#delete all nodes
