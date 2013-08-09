@@ -32,7 +32,7 @@ module Jekyll
 				if para.include? 'description:'
 					descript=para
 				end
-				if para.include? 'parameters:'
+				if para.include? 'inputs:'
 					inputs=para
 				end
 				if para.include? 'resource_url:'
@@ -94,9 +94,9 @@ module Jekyll
 			end
 			#DISPLAY THE PARAMETERS
 			output += "&#x20;<table class='paras'><tr><th>Parameters</th></tr>"
-			inputs.slice!(0..11)
+			inputs.slice!(0..7)
 			if !inputs.strip.empty?
-				inputsparts=inputs.split(" | ")
+				inputsparts=inputs.split(" |")
 				inputsparts.each do |input|
 					parts=input.split("- ")
 					output+="<tr>"

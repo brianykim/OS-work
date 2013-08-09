@@ -32,7 +32,6 @@ resource_url: www.api.dev.onescreen.com/v2/accounts/mine
 {% comment %}
 {% endcomment %}
 {% resource ad_macros: what what WHAT what %}
-{% method name: /, description: here we go!, resource_url: www.api.dev.onescreen.com/v2/ad_formats/ %}
 {% resource Inventories: Use to encapsulate multiple applications to target in a campaign. %}
 {% method %}
 name: GET "/inventories";

@@ -21,7 +21,6 @@ resource_url: www.api.dev.onescreen.com/v2/accounts/mine
 {% endmethod %}
 =end
       get "/mine" do
-#some sort of description or overview? maybe input tags... idk O_O
         output = Account.active.find(current_account.id)
         output
       end
