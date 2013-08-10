@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR=/home/local/OFFICE/bkim
+BASE_DIR=/home/local/OFFICE
 cd $BASE_DIR/code
 ./parser.rb platform
 cd $BASE_DIR/os_api

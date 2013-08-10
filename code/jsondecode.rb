@@ -48,6 +48,7 @@ def runit
 			#node1=@neo.create_node(what)
 			puts what["account_alias"]
 		end
+		#if there exist similar properties to create relationships... n^2? O_O
 	end
 end
 runit

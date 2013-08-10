@@ -5,7 +5,7 @@ require 'neography'
 Neography.configure do |config|
 	config.protocol = "http://"
 	config.server = "localhost"
-	confit.port = 7474
+	config.port = 7474
 	config.directory = ""
 	config.cypher_path ="/cypher"
 	config.gremlin_path = "/ext/GremlinPlugin/graphdb/execute_script"
@@ -14,7 +14,7 @@ Neography.configure do |config|
 	config.max_threads = 20
 	config.authentication = nil
 	config.username = nil
-	config.passowrd = nil
+	config.password = nil
 	config.parser = MultiJsonParser
 end
 
@@ -63,7 +63,7 @@ n1.shortest_path_to(n2).incoming(:friends).depth(4).nodes
 #where string will have the contents of each unique account info
 #JSON.parse(string)
 #split by line breaks???
-#RUBY.LINES, 
+#RUBY.LINES,
 #FOR LINE IN LINES
 #STRING = LINE
 #JSON.PARSE

@@ -85,6 +85,11 @@ console.log("Server has started");
 
 exports.start = start;
 
+function route(pathname) {
+	console.log("About to route a request for " + pathname);
+}
+exports.route = route;
+
 node index.js
 
 where server will be a .js file in the same directory
