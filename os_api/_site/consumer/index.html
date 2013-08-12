@@ -12,12 +12,12 @@
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <link href='http://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'>
-        
+
         <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="/assets/javascripts/script.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-       
+
         <!--BOOT STRAP
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -30,16 +30,16 @@
       </br>
               HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
             </br>
-              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post" ><!--  WHAT GOES ON INSIDE ACTION??? 
+              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post" ><!--  WHAT GOES ON INSIDE ACTION???
                 Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
                 Password: <input type="password" name="pwd">-->
                 <input class = "OSbutton"type="submit" value="LOG INTO MEDIAGRAPH!">
               </form>
               <button type="button" onclick="loadXMLDoc()">Request data</button>
-              
+
       </div>
         <div class="container">
-          <div  class="site">  
+          <div  class="site">
             <div class="header">
               <a class="logo" href="http://www.onescreen.com"><img id="logopic" src="/assets/img/onescreen_logo_light.png"/></a>
               <h1 class="title"><a class="largebutton" href="/">ONESCREEN API HOME</a></h1>
@@ -53,13 +53,13 @@
                  
                 <div class = "linked"><a  id="unclicked"  href="/platform">Platform</a></div>
                 <ul class = "content" name="ulist" id="posts">
+
                   
                   
-                  
-                 
+
                   <li><a class="classes" href="/platform/#accounts">accounts</a></li>
                     <ul class="methods">
-                  
+
                       <li id="method" style="color:purple">Methods</li>
                     
                     
@@ -67,26 +67,27 @@
                     
                     
                     
-                                       
-
-                      <li><a class="methods" id="get "/mine"" href= "/platform/#accounts-mine">get "/mine"</a></li>
                     
-                   
+                    
+
+                      <li><a class="methods" id="get "/mine"" href= "/platform/#accounts-get mine">get "/mine"</a></li>
+                    
+
                     </ul>
                   
-                 
+
                   <li><a class="classes" href="/platform/#ad_macros">ad_macros</a></li>
                     <ul class="methods">
-                  
+
                       <li id="method" style="color:purple">Methods</li>
                     
-                   
+
                     </ul>
                   
-                 
+
                   <li><a class="classes" href="/platform/#Inventories">Inventories</a></li>
                     <ul class="methods">
-                  
+
                       <li id="method" style="color:purple">Methods</li>
                     
                     
@@ -94,53 +95,58 @@
                     
                     
                     
-                                       
+                    
+                    
 
-                      <li><a class="methods" id="GET "/inventories"" href= "/platform/#Inventories-GET inventories">GET "/inventories"</a></li>
+                      <li><a class="methods" id="GET "/inventories"" href= "/platform/#Inventories-inventories">GET "/inventories"</a></li>
                     
                     
                     
                     
                     
                     
-                                       
+                    
+                    
 
-                      <li><a class="methods" id="GET "/inventories/" href= "/platform/#Inventories-GET inventories">GET "/inventories/</a></li>
+                      <li><a class="methods" id="GET "/inventories/:id"" href= "/platform/#Inventories-inventories:id">GET "/inventories/:id"</a></li>
                     
                     
                     
                     
                     
                     
-                                       
+                    
+                    
 
-                      <li><a class="methods" id="POST "/inventories/" href= "/platform/#Inventories-POST inventories">POST "/inventories/</a></li>
+                      <li><a class="methods" id="POST "/inventories/:id"" href= "/platform/#Inventories-inventories:id">POST "/inventories/:id"</a></li>
                     
                     
                     
                     
                     
                     
-                                       
+                    
+                    
 
-                      <li><a class="methods" id="PUT "/inventories/" href= "/platform/#Inventories-PUT inventories">PUT "/inventories/</a></li>
+                      <li><a class="methods" id="PUT "/inventories/:id"" href= "/platform/#Inventories-inventories:id">PUT "/inventories/:id"</a></li>
                     
                     
                     
                     
                     
                     
-                                       
+                    
+                    
 
-                      <li><a class="methods" id="DELETE "/inventories/" href= "/platform/#Inventories-DELETE inventories">DELETE "/inventories/</a></li>
+                      <li><a class="methods" id="DELETE "/inventories/:id"" href= "/platform/#Inventories-inventories:id">DELETE "/inventories/:id"</a></li>
                     
-                   
+
                     </ul>
                   
-                  
+
                   <!--<li></li>
                   -->
-                </ul> 
+                </ul>
                  
                  
                 </br>
@@ -152,26 +158,26 @@
                  
                 <div class = "linked"><a  id="unclicked"  href="/data">Data</a></div>
                 <ul class = "content" name="ulist" id="posts">
+
                   
                   
-                  
-                  
+
                   <!--<li></li>
                   -->
-                </ul> 
+                </ul>
                  
                  
                 </br>
                  
                 <div class = "linked"><a  id="unclicked"  href="/consumer">Consumer</a></div>
                 <ul class = "content" name="ulist" id="posts">
+
                   
                   
-                  
-                  
+
                   <!--<li>{"methods"=>["method"], "name"=>"Android"}{"methods"=>["method1"], "name"=>"IOS"}{"methods"=>nil, "name"=>"Roku"}</li>
                   -->
-                </ul> 
+                </ul>
                  
                  
                 
@@ -190,7 +196,7 @@
 <div id="post">
 <h1 id='hi_i_am_a_header'>Hi, I am a header!</h1>
 
-<p>Right now it is: 2013-08-08 17:02:09 -0700</p>
+<p>Right now it is: 2013-08-12 11:06:08 -0700</p>
 
 </div>
                 <div class="heading"><h3><span class="http_method"><a class="toggleOperation" href="">

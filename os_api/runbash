@@ -1,0 +1,10 @@
+#!/bin/bash
+
+./parser.rb platform
+./parser.rb consumer
+./parser.rb data
+mv 2013-6-25-platform.markdown _posts
+mv 2013-6-25-consumer.markdown _posts
+mv 2013-6-25-data.markdown _posts
+jekyll build
+jekyll serve

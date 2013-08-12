@@ -1,24 +1,3 @@
----
-layout: post
-categories: jekyll update
-title: "Platform"
-resources:
-  -
-    methods:
-      - get "/mine"
-    name:  accounts
-  -
-    methods:
-    name: ad_macros
-  -
-    methods:
-      - GET "/inventories"
-      - GET "/inventories/:id"
-      - POST "/inventories/:id"
-      - PUT "/inventories/:id"
-      - DELETE "/inventories/:id"
-    name: Inventories
----
  {% resource accounts: Description %}
 {% method %}
 name: get "/mine";
