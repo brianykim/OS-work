@@ -58,7 +58,7 @@ int main()
 
 						if(small%side==0)
 						{
-							
+
 							across=false;
 						}
 						else
@@ -72,7 +72,7 @@ int main()
 					else
 					{
 						across=false;
-						
+
 					}
 					if(j*side+l+side*z>=side*side)
 					{
@@ -85,23 +85,23 @@ int main()
 							down=false;
 						}
 					}
-						
+
 						if(j*side+l+(side-1)*z>=side*side||j*side+l+(side-1)*z%side==side-1)//
 						{
 							diagonalone=false;
 						}
 					else
-					{	
+					{
 						if(x!=board[j*side+l+(side-1)*z])
 						{
 							diagonalone=false;
 						}
 					}
-					
+
 					if(j*side+l+(side+1)*z>=side*side||j*side+l+(side+1)*z%side==side-1)//
 					{
 						diagonaltwo=false;
-						
+
 					}
 					else
 					{
@@ -125,6 +125,14 @@ int main()
 
 			}
 		}
+		//need better diagonal case
+		//so in order to be a project manager....
+		//need to analyze all types of products
+		//convoluted vs. elegance
+		//how to always improve something, but also be able
+		//to consider all parts of a problem and address each one
+		//whether together or separately
+		//innovative, driven, and always in control
 		ofile<<"Case #"<<i+1<<": ";
 		if(red&&blue)
 		{

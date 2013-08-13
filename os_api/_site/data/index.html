@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Data</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/css/syntax.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <link href='http://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'>
+
+        <script src ="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="/assets/javascripts/script.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <!--BOOT STRAP
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <script src="/assets/javascripts/bootstrap.min.js"></script>
+      -->
+    </head>
+    <body>
+      <div class="row-fluid">
+      <div class="span2" id="sideinfo">
+      </br>
+              HERE WE CAN EMBED THINGS LIKE PERMISSIONS, OAUTH REQUESTS OR THINGS LIKE FAQ'S, MAYBE EVEN RELATED THINGS
+            </br>
+              <form name="login" onsubmit="return validateForm()" action="http://www.mediagraph.com" method="post" ><!--  WHAT GOES ON INSIDE ACTION???
+                Mediagraph Email: <input id='emaillogin'type="text" value="@mediagraph.com" name="mediagraphemail"><br>
+                Password: <input type="password" name="pwd">-->
+                <input class = "OSbutton"type="submit" value="LOG INTO MEDIAGRAPH!">
+              </form>
+              <button type="button" onclick="loadXMLDoc()">Request data</button>
+
+      </div>
+        <div class="container">
+          <div  class="site">
+            <div class="header">
+              <a class="logo" href="http://www.onescreen.com"><img id="logopic" src="/assets/img/onescreen_logo_light.png"/></a>
+              <h1 class="title"><a class="largebutton" href="/">ONESCREEN API HOME</a></h1>
+            </div>
+            <div class="" id="navbar">
+            </br>
+              <span class="apicomp">API Components</span>
+              </br>
+                <div id="accordion">
+                </br>
+                 
+                <div class = "linked"><a  id="unclicked"  href="/platform">Platform</a></div>
+                <ul class = "content" name="ulist" id="posts">
+
+                  
+                  
+
+                  <li><a class="classes" href="/platform/#accounts">accounts</a></li>
+                    <ul class="methods">
+
+                      <li id="method" style="color:purple">Methods</li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="get "/mine"" href= "/platform/#accounts-get mine">get "/mine"</a></li>
+                    
+
+                    </ul>
+                  
+
+                  <li><a class="classes" href="/platform/#ad_macros">ad_macros</a></li>
+                    <ul class="methods">
+
+                      <li id="method" style="color:purple">Methods</li>
+                    
+
+                    </ul>
+                  
+
+                  <li><a class="classes" href="/platform/#Inventories">Inventories</a></li>
+                    <ul class="methods">
+
+                      <li id="method" style="color:purple">Methods</li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="GET "/inventories"" href= "/platform/#Inventories-inventories">GET "/inventories"</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="GET "/inventories/:id"" href= "/platform/#Inventories-inventories:id">GET "/inventories/:id"</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="POST "/inventories/:id"" href= "/platform/#Inventories-inventories:id">POST "/inventories/:id"</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="PUT "/inventories/:id"" href= "/platform/#Inventories-inventories:id">PUT "/inventories/:id"</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                      <li><a class="methods" id="DELETE "/inventories/:id"" href= "/platform/#Inventories-inventories:id">DELETE "/inventories/:id"</a></li>
+                    
+
+                    </ul>
+                  
+
+                  <!--<li></li>
+                  -->
+                </ul>
+                 
+                 
+                </br>
+                 
+                <div class = "linked"><a  id="unclicked"  href="/data">Data</a></div>
+                <ul class = "content" name="ulist" id="posts">
+
+                  
+                  
+
+                  <!--<li></li>
+                  -->
+                </ul>
+                 
+                 
+                </br>
+                 
+                <div class = "linked"><a  id="unclicked"  href="/consumer">Consumer</a></div>
+                <ul class = "content" name="ulist" id="posts">
+
+                  
+                  
+
+                  <!--<li></li>
+                  -->
+                </ul>
+                 
+                 
+                </br>
+                 
+                 
+                 <div class = "linked"><a id="unclicked" href="http://share.onescreen.co/resources/HelpDocuments/index.html">Java</a></div>
+                 
+                </br>
+                 
+                <div class = "linked"><a  id="unclicked"  href="/data">Data</a></div>
+                <ul class = "content" name="ulist" id="posts">
+
+                  
+                  
+
+                  <!--<li></li>
+                  -->
+                </ul>
+                 
+                 
+                </br>
+                 
+                <div class = "linked"><a  id="unclicked"  href="/consumer">Consumer</a></div>
+                <ul class = "content" name="ulist" id="posts">
+
+                  
+                  
+
+                  <!--<li>{"methods"=>["method"], "name"=>"Android"}{"methods"=>["method1"], "name"=>"IOS"}{"methods"=>nil, "name"=>"Roku"}</li>
+                  -->
+                </ul>
+                 
+                 
+                
+               </div>
+            </div>
+                <!--<img src="http://www.onescreen.com/files/carousel_connect1.jpg"/>-->
+                <div class="span6">
+                </br>
+</br>
+
+<h1 id="postp"> MODULE: ONESCREEN</h1>
+<h1 id="posttitle">Class Data</h1>
+
+<!--<p class="meta">25 Jun 2013</p>
+-->
+<div id="post">
+
+
+</div>
+                <div class="heading"><h3><span class="http_method"><a class="toggleOperation" href="">
+      get
+    </a></span><span class="path"><a class="toggleOperation" href="#!/dictionaries/listEntries_get_0">
+      /entries
+    </a></span></h3></div><div id="dictionaries_listEntries_get_0_content" class="content" style="display: block;"><form onsubmit="return loadXMLDoc()" class="sandbox" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"></div><h4>
+      Parameters
+    </h4>
+    <table class="fullwidth"><thead><tr>
+    	<th style="width: 100px; max-width: 100px">
+      Parameter
+    </th>
+    <th style="width: 310px; max-width: 310px">
+      Value
+    </th>
+    <th style="width: 200px; max-width: 200px">
+      Description
+    </th>
+    <th style="width: 320px; max-width: 330px">
+      Data Type
+    </th>
+    </tr></thead>
+    <tbody class="operation-params">
+    <tr><td class="code">
+      parameter 1
+    </td>
+    <td><input type="text" value="" placeholder="" name="headword" minlength="0"></input></td><td>
+      Search for field
+    </td>
+    <td><span class="model-signature">
+      string
+    </span></td></tr>
+    <tr><td class="code">
+      options
+    </td>
+    <td><select name="_opts"><option value="" selected=""></option>
+    	<option value="starts">
+      starts
+    </option>
+    <option value="ends">
+      ends
+    </option>
+    <option value="exact">
+      exact
+    </option>
+    <option value="contains">
+      contains
+    </option></select></td>
+    <td>
+      Specify field
+    </td>
+    <td><span class="model-signature">
+      string
+    </span></td></tr>
+    <tr><td class="code">
+      jsonp
+    </td>
+    <td><input type="text" value="" placeholder="" name="jsonp" minlength="0"></input></td><td>
+      JSON callback wrapper name
+    </td>
+    <td><span class="model-signature">
+      string
+    </span></td></tr></tbody></table>
+    <div class="sandbox_header"><input onclick="ajaxsubmit()" class="submit" type="button" value="Try it out!" name="commit"></input><a class="response_hider" style="display: none;" href="#">
+      Hide Response
+    </a></div></form>
+    <div class="response" style="">
+    	<h4>
+      http://cdn.onescreen.net/rtm/ios-silo.json
+    </h4>
+    <div class="block request_url"><pre> … </pre></div>
+    	<h4>
+	   	   Response Body
+   		</h4>
+   
+    <div class="block response_body undefined" ><pre class="xml"><code>  <div id="myDiv"> NEED JAVASCRIPT TO MAKE API CALL AND OUTPUT RESULT  </div></code></pre></div>
+    <h4>
+      Response Code
+    </h4>
+    <div class="block response_code"><pre>
+      0
+    </pre>
+</div>
+<h4>
+      Response Headers
+    </h4>
+    <div class="block response_headers"><pre></pre></div></div></div>
+</div>
+              </div>
+            <div class="footer">
+              <div class="contact">
+                <p id="companyinfo">© OneScreen Inc.<br/>
+                  949-525-4466<br/>
+                  connect@onescreen.com
+
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://fb.com/onescreen/">fb.com/onescreen</a><br/>
+                  <a href="http://twitter.com/onescreen/">twitter.com/onescreen</a><br/>
+                  <a href="http://linkedin.com/company/onescreen">linkedin.com/company/onescreen</a><br/>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+      </div>
+    </body>
+</html>

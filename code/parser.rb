@@ -4,7 +4,7 @@ def parsing
 	ARGV.each do |argument|
 	  directoryname=""
 	  directoryname+= "#{argument}"
-	
+
 	#change it so that you can run it on multiple directories by simple including them into the
 	#commandline arguments, and output that "so and so"-directory could not be found if such
 	#is the case
@@ -16,7 +16,7 @@ def parsing
 			File.new("rubyoutput.txt","w")
 			output=File.open("rubyoutput.txt","w")
 			directory.each do |filename|
-				
+
 				#to check if comment block been has encountered
 				block=false
 				liquidblock=false
@@ -53,7 +53,12 @@ def parsing
 									nameline=line
 									nameline.strip
 									namelineparts=nameline.split(":")
+									#PROBLEM LINE
 									name=namelineparts.at(1)
+									if namelineparts.at(2) != nil
+										name+=":"
+										name+=namelineparts.at(2)
+									end
 									name=name.strip
 									name=name.chomp(";")
 									container[resname].push(name)
@@ -70,7 +75,7 @@ def parsing
 							end
 							if line.include? "=begin" and not line.include? " begin"
 								block=true
-								
+
 							end
 							if line.include? "{% end"
 								liquidblock=false
@@ -98,7 +103,7 @@ def parsing
 								container[resname]
 
 							end
-							
+
 							output.puts(line)
 						else
 							if line.include? "{% "
@@ -130,7 +135,7 @@ def parsing
 					end
 
 				end
-				
+
 			end
 			output.close
 			#need to open up the directory name using Dir and then.... we can start going into parsing using Regexp
@@ -143,15 +148,15 @@ def parsing
 			taglines=IO.readlines(outbody)
 			#puts taglines.at(0)
 			outname="2013-6-25-"+directoryname+".markdown";
-			File.new(outname,"w")
-			outdown=File.open(outname,"w")
+			File.new("./_posts/"+outname,"w")
+			outdown=File.open("./_posts/"+outname,"w")
 			outdown.puts("---")
 			outdown.puts("layout: post")
 			outdown.puts("categories: jekyll update")
 			outdown.puts("title: \""+directoryname.capitalize+"\"")
 			outdown.puts("resources:")
 			#puts directoryname
-			
+
 			#puts container
 			for key in container.keys
 				outdown.puts("  -")
@@ -176,5 +181,5 @@ end
 #USE REGEXP TO BE SPECIFIC ENOUGH
 #puts /expression/ =~ "How about this expression?"
 #slice and chomp the comments out of it
-#extract the 
+#extract the
 parsing
